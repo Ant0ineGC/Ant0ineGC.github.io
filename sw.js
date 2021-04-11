@@ -1,5 +1,18 @@
+const cacheNAme = 'veille-techno-1.0'
+
 self.addEventListener('install', (evt) => {
     console.log(`sw installé à ${new Date().toLocaleTimeString()}`);
+    caches.open(cacheNAme).then(cache => {
+        cache.addAll([
+            'index.html',
+            'style.css',
+            'vendors/bootsrap4.min.css',
+            'add_techno.html',
+            'add_techno.js',
+            'contact.html',
+            'contact.js',
+        ])
+    })
 });
 
 self.addEventListener('activate', (evt) => {
@@ -15,3 +28,4 @@ self.addEventListener('fetch', (evt) => {
     console.log('sw intercepte la requête suivante via fetch', evt);
     console.log('url interceptée', evt.request.url);
 });
+
