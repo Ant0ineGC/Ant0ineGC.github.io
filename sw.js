@@ -27,5 +27,17 @@ self.addEventListener('fetch', (evt) => {
     
     console.log('sw intercepte la requête suivante via fetch', evt);
     console.log('url interceptée', evt.request.url);
+
+    evt.respondWith(
+        caches.match(evt.request).then (res => {
+            if (res) {
+                return (res);
+            }
+            return fetch (evt.request).then(newResponse => {
+                caches.open (cacheNAme).then (cache => cache.put (evt.request, newResponse));
+                return newResponse.clone();
+            })
+        })
+    );
 });
 
