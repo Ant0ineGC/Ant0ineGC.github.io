@@ -22,10 +22,6 @@ self.addEventListener('activate', (evt) => {
 self.addEventListener('fetch', (evt) => {
     if(!navigator.onLine) {
         
-    
-    
-    console.log('sw intercepte la requête suivante via fetch', evt);
-    console.log('url interceptée', evt.request.url);
 
     evt.respondWith(
         caches.match(evt.request).then (res => {
@@ -38,5 +34,6 @@ self.addEventListener('fetch', (evt) => {
             })
         })
     );
+    }
 });
 
