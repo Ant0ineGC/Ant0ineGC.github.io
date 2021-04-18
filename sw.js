@@ -1,7 +1,10 @@
+// version 1.0.0 18-04-21-1940
+
 const cacheNAme = 'veille-techno-2.0'
 
 self.addEventListener('install', (evt) => {
     console.log(`sw installé à ${new Date().toLocaleTimeString()}`);
+    self.skipWaiting();
     const cachePromise = caches.open(cacheNAme).then(cache => {
         return cache.addAll([
             'index.html',
