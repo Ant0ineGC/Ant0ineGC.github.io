@@ -1,5 +1,3 @@
-
-console.log('hello depuis main');
 const technosDiv = document.querySelector('#technos');
 
 function loadTechnologies(technos) {
@@ -19,17 +17,7 @@ function loadTechnologies(technos) {
 loadTechnologies(technos);
 
 if(navigator.serviceWorker) {
-    navigator.serviceWorker.register('sw.js')
-                            .catch(err => console.error);
-}
-
-if(window.caches) {
-    caches.open('veille-techno-1.0').then(cache => {
-        cache.addAll([
-            'index.html',
-            'main.js',
-            'vendors/bootsrap4.min.css'
-        ]);
-    });
-    
+    navigator.serviceWorker
+        .register('sw.js')
+        .catch(err => console.error('service worker NON enregistré', err));
 }
