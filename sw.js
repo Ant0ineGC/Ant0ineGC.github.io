@@ -52,6 +52,7 @@ self.addEventListener('activate', (evt) => {
 //     } 
 // });
 
+
 // network first strategy
 self.addEventListener('fetch', evt => {
     evt.respondWith(
