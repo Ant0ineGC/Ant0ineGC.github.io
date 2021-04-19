@@ -12,6 +12,7 @@ self.addEventListener('install', (evt) => {
             'add_techno.js',
             'contact.html',
             'contact.js',
+            'orthogenie.html',
         ])
         .then(console.log('cache initialisé'))
         .catch(console.err);
