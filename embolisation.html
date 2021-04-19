@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+  <body>
+     
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="index.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+
+<div id="section-protocole-embolisation" class="section level1">
+    <h1>PROTOCOLE EMBOLISATION</h1>
+    <div id="section-consultation-danesthésie" class="section level3">
+    <h3>Consultation d’anesthésie</h3>
+    <ol style="list-style-type: decimal">
+    <li><p>Les patientes sont vues en consultation d’anesthésie à Port-Royal dans les délais légaux (au moins 48h avant le geste)</p></li>
+    <li><p>La consigne de jeûne est donnée pour les patientes entrant le matin de la procédure</p></li>
+    <li><p>La <strong>prémédication</strong> est prescrite</p></li>
+    <li><p>Une ordonnance pour <strong>hémostase</strong> et <strong>créatininémie</strong> est donnée si nécessaire</p></li>
+    </ol>
+    </div>
+    <div id="section-prémédication-en-salle-dhospitalisation-gynécologie" class="section level3">
+    <h3>Prémédication en salle d’hospitalisation (Gynécologie)</h3>
+    <ol style="list-style-type: decimal">
+    <li>Actiskenan ou Sevredol 10 mg + Atarax 50 mg per os avant de descendre en SSPI Port-Royal 1 heure avant l’embolisation (13 691 ou 13 690)</li>
+    </ol>
+    <p>.</p>
+    </div>
+    <div id="section-a-larrivée-de-la-patiente-en-sspi-port-royal" class="section level3">
+    <h3>A l’arrivée de la patiente en SSPI Port-Royal</h3>
+    <ol style="list-style-type: decimal">
+    <li><p><strong>Voie veineuse</strong> périphérique garde veine avec octopus</p></li>
+    <li><p><strong>Paracétamol</strong> 1g en pochon + <strong>Néfopam</strong> 20 mg + 100 mg de <strong>Profénid</strong> (sauf contre-indication)</p></li>
+    <li><p><strong>Mise en place de la PCA morphine</strong> IV : dilution : Morphine 1 mg/ml + Drolpetan 50 µg/ml + Kétamine 1 mg/ml, bolus 2 ml, période réfractaire 5 minutes, dose maximum : 40 mg/4 heures, pas de débit continu</p></li>
+    </ol>
+    </div>
+    <div id="section-a-larrivée-de-la-patiente-dans-lunité-de-radiologie-interventionnelle" class="section level3">
+    <h3>A l’arrivée de la patiente dans l’unité de radiologie interventionnelle</h3>
+    <ol style="list-style-type: decimal">
+    <li><p><strong>Pendant le geste</strong> : Monitorage standard, ventilation spontanée, O2 nasale 3L/min</p></li>
+    <li><p><strong>Analgésie au moment de l’embolisation en présence de l’anesthésiste</strong> le mardi (au choix) : Sufentanil 0,1 à 0,2 μg/kg en deux fois ou Alfentanil 10 μg/kg en deux fois ou Remifentanil en OC à 1,5 à 2,5 ng/ml</p></li>
+    <li><p><strong>Sinon utilisation de PCA morphine</strong> par la patiente</p></li>
+    </ol>
+    </div>
+    <div id="section-en-sspi-port-royal-après-lembolisation" class="section level3">
+    <h3>En SSPI Port-Royal après l’embolisation</h3>
+    <ol style="list-style-type: decimal">
+    <li><p><strong>Titration de Morphine IV</strong> de 2 mg en 2 mg toutes les deux minutes jusqu’à obtention d’une douleur ≤ 3 sur l’EVA ou l’ENS</p></li>
+    <li><p><strong>Poursuite de la PCA de morphine IV en modifiant les paramètres +++</strong> : bolus 1 ml, période réfractaire 7 minutes, idem pour les autres paramètres</p></li>
+    <li><p><strong>Prévention des nausées et vomissements</strong> : Soludécadron 4 mg + Dropéridol 1,25 mg IVD</p></li>
+    </ol>
+    </div>
+    <div id="section-prescriptions-pour-lhospitalisation-gynécologie" class="section level3">
+    <h3>Prescriptions pour l’hospitalisation (Gynécologie)</h3>
+    <ol style="list-style-type: decimal">
+    <li><p>Surveillance hémodynamique, respiratoire, douleur et conscience toutes les 4 heures</p></li>
+    <li><p>La patiente peut boire et manger dès son retour en chambre.</p></li>
+    <li><p>Profénid 50 mg x 4/jr PO + Paracétamol 1 g x 4/jr PO + Nefopam 20 mg x4/jour PO systématiques</p></li>
+    <li><p>Poursuite PCA morphine IV pendant 24 à 48 heures puis relai Actiskenan ou Sévrédol 10 mg x 6/jour si EVA ou ANS &gt; 3</p></li>
+    <li><p>Zophren 4 mg x 3/jour IVsi nausées ou vomissements</p></li>
+    </ol>
+    <p><strong>Cette fiche doit être maintenue agrafée au dossier</strong></p>
+    <p>Protocole établi et validé le 25/09/2012 par : Dr P. ALFONSI, Dr B. BORGHESE, Dr A. GOMOLA, Dr F. TOUBAS, Pr A. MIGNON. Mise à jour en juillet 2018</p>
+<br></br>    <br></br><br></br><br></br>
+</div>
+    </div>
+    </div>
