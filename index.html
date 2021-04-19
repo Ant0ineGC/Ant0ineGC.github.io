@@ -13,39 +13,106 @@
 
   </head>
   <body>
-    
-    <div class="container">
-      <div class="phone">
-        <div class="content">
-          
-          <nav role="navigation">
-            <div id="menuToggle">
-              <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-            <ul id="menu">
-              <li><a href="#">Présentation du service</a></li>
-              <li><a href="about.html">Orthogénie</a></li>
-              <li><a href="#">Protocole embolisation</a></li>
-              <li><a href="#">Protocole GEU</a></li>
-              <li><a href="#">Protocole IHG</a></li>
-              <li><a href="#">Protocole grossesse arrétée</a></li>
-              <li><a href="#">Numeros utiles</a></li>
-              <li><a href="#">Codages utiles</a></li>
-              <li><a href="#">Palnning de cours</a></li>
-              <li><a href="#">Planning de bloc</a></li>
-              <li><a href="#">Planning de garde</a></li>
-            </ul>
-           </div>
-          </nav>
-        </div>
-       </div>
+     
+    <div class="page">
+      <span class="page__name">Mobile Menu Animation</span>
+      <span class="page__hint">
+        Works better on mobile devices. The hamburger button is comfortably available for both left-handed and right-handed users.
+      </span>
     </div>
-   
+    <div class="menu">
+      <nav class="menu__nav">
+        <ul class="menu__list r-list">
+          <li class="menu__group">
+            <a href="#0" class="menu__link r-link">Home</a>
+          </li>
+          <li class="menu__group">
+            <a href="#0" class="menu__link r-link">About me</a>
+          </li>
+          <li class="menu__group">
+            <a href="#0" class="menu__link r-link">Services</a>
+          </li>
+          <li class="menu__group">
+            <a href="#0" class="menu__link r-link">Portfolio</a>
+          </li>
+          <li class="menu__group">
+            <a href="#0" class="menu__link r-link">Blog</a>
+          </li>
+          <li class="menu__group">
+            <a href="#0" class="menu__link r-link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu__toggle r-button" type="button">
+        <span class="menu__hamburger m-hamburger">
+          <span class="m-hamburger__label">
+            <span class="menu__screen-reader screen-reader">Open menu</span>
+          </span>
+        </span>
+      </button>
+    </div>
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
 
 
+(function(){
+  'use strict';
 
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
     <div id="section-fonctionnement-du-service" class="section level1">
       <h1>FONCTIONNEMENT DU SERVICE</h1>
       <div id="section-chirurgie" class="section level3">
