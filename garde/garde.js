@@ -1,4 +1,4 @@
-d3.text("data.csv", function(data) {
+d3.text("/garde/garde.csv", function(data) {
     var parsedCSV = d3.csv.parseRows(data);
 
     var container = d3.select("body")
