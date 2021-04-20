@@ -1,77 +1,77 @@
-﻿PR;Tel
-Accueil urgence;13592
-Interne gyneco chir;15426
-Assistante sociale;14075/13717
-Pyschologue (Mme Antoine);13582
-Salle Palmer;13656
-Salle Musset;13664
-Cadre hospit (Mme Odic);15238
-SDN;13692
-Interne obs;13943/13944
-Interne PMA;15420
-Interne DAN;14514
-;
-**Bloc**;**Tel**
-Régulation journée;13686
-IBODE;13848
-Brancardier;15118/13949
-Interne anesth;13952/13953
-Senior anesth;13950/13951
-Salle 5;16687
-SSPI;16694
-SSPI Fax;13912
-Accueil UCA;13028
-Bloc Fax;13689
-;
-**Avis spé**;**Tel**
-Interne Gyneco med;15501
-Interne uro;15088
-Interne dig;14004
-Orthogénie;13861/13863
-Psy;12938
-Institut Curie;2387
-;
-**SAU**;**Tel**
-Senior SAU;12721
-Interne SAU;14059
-Cadre SAU;15438
-Radio de garde;15095
-TDM SAU;15314/12467
-Manip radio B;12514/15094
-Radio A/Fax;12469/12475
-TDM A;18978/12285
-IRM;12798
-;
-**Labo**;**Tel**
-Anapath;11468
-EFS/Fax;12667/12681
-Labo de garde;11613
-Bacterio;13414/18197
-Avis infectieux;14111
-Bioch;11613/11918/18401
-Viro;13330
-Hemato;18439
-Pharmacie;14231
-Centre de tri;13181/11613
-Anapath Lyon;04 78 86 66 78
-Anapath Lyon fax;04 78 86 65 54
-Foetopath Necker;01 44 49 49 82
-;
-**DECT Chef**;**Tel**
-Dr Abo;13612
-Dr Bourret;15467
-Dr Campin;14287
-Dr Chougrani;13612
-Dr Gaudet Chardonnet;15434
-Dr Marcellin;15495
-Dr Marzouk;15204
-Dr Pierre;15428
-Dr Pirot;15303
-;
-**Assisantes médico-administrative**;**Tel**
-E. Bonmarchand;13681
-J. Comeau;13661
-M-H De Jesus;13680
-G Gouet;13669
-N. Mehidi;13670
-Fax;13662/13672
+﻿PR,Tel
+Accueil urgence,13592
+Interne gyneco chir,15426
+Assistante sociale,14075/13717
+Pyschologue (Mme Antoine),13582
+Salle Palmer,13656
+Salle Musset,13664
+Cadre hospit (Mme Odic),15238
+SDN,13692
+Interne obs,13943/13944
+Interne PMA,15420
+Interne DAN,14514
+,
+**Bloc**,**Tel**
+Régulation journée,13686
+IBODE,13848
+Brancardier,15118/13949
+Interne anesth,13952/13953
+Senior anesth,13950/13951
+Salle 5,16687
+SSPI,16694
+SSPI Fax,13912
+Accueil UCA,13028
+Bloc Fax,13689
+,
+**Avis spé**,**Tel**
+Interne Gyneco med,15501
+Interne uro,15088
+Interne dig,14004
+Orthogénie,13861/13863
+Psy,12938
+Institut Curie,2387
+,
+**SAU**,**Tel**
+Senior SAU,12721
+Interne SAU,14059
+Cadre SAU,15438
+Radio de garde,15095
+TDM SAU,15314/12467
+Manip radio B,12514/15094
+Radio A/Fax,12469/12475
+TDM A,18978/12285
+IRM,12798
+,
+**Labo**,**Tel**
+Anapath,11468
+EFS/Fax,12667/12681
+Labo de garde,11613
+Bacterio,13414/18197
+Avis infectieux,14111
+Bioch,11613/11918/18401
+Viro,13330
+Hemato,18439
+Pharmacie,14231
+Centre de tri,13181/11613
+Anapath Lyon,04 78 86 66 78
+Anapath Lyon fax,04 78 86 65 54
+Foetopath Necker,01 44 49 49 82
+,
+**DECT Chef**,**Tel**
+Dr Abo,13612
+Dr Bourret,15467
+Dr Campin,14287
+Dr Chougrani,13612
+Dr Gaudet Chardonnet,15434
+Dr Marcellin,15495
+Dr Marzouk,15204
+Dr Pierre,15428
+Dr Pirot,15303
+,
+**Assisantes médico-administrative**,**Tel**
+E. Bonmarchand,13681
+J. Comeau,13661
+M-H De Jesus,13680
+G Gouet,13669
+N. Mehidi,13670
+Fax,13662/13672
