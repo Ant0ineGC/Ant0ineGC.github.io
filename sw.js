@@ -5,7 +5,7 @@ self.addEventListener('install', (evt) => {
     const cachePromise = caches.open(cacheName).then(cache => {
         return cache.addAll([
             'index.html',
-            'main.js',
+            'bloc.html',
             'style.css',
             'vendors/bootstrap4.min.css',
             'add_techno.html',
