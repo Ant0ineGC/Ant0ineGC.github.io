@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="./manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+  <body>
+     
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="index.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+
+<div id="section-orthogenie" class="section level1">
+    <h1>ORTHOGENIE</h1>
+    <div id="section-activité-dorthogénie-service-de-gynécologie-hôpital-port-royal" class="section level3">
+    <h3>Activité d’Orthogénie Service de Gynécologie Hôpital Port-Royal</h3>
+    <p>L’unité d’orthogénie réalise chaque année environ 2000 IVG. Les méthodes proposées sont :</p>
+    <ul>
+    <li>l’IVG médicamenteuse à domicile (jusqu’à 7 SA)</li>
+    <li>l’IVG médicamenteuse en hospitalisation (jusqu’à 9 SA)</li>
+    <li>l’IVG par aspiration sous anesthésie locale ou générale (jusqu’à 14 SA).</li>
+    </ul>
+    <p>Les patientes sont hospitalisées en HDJ de gynécologie au 2ème étage.</p>
+    <p><strong>Pour les IVG instrumentales sous AG</strong>, les interventions sont réalisées au bloc de gynécologie :</p>
+    <ul>
+    <li>les lundi, mercredi et vendredi par un médecin de l’unité d’orthogénie</li>
+    <li><strong>Les mardi ainsi qu’un vendredi par mois, par les internes de gynéco</strong>. sous la responsabilité d’un médecin sénior</li>
+    <li><strong>Les jeudi par les internes d’obstétrique</strong> sous la responsabilité d’un médecin sénior</li>
+    </ul>
+    <p><strong>Un compte rendu manuscrit succinct doit être noté sur le feuillet jaune</strong> du dossier papier de la patiente et <strong>un CRO doit également être rédigé</strong> (modèle Word « CRO IVG » sur le bureau des ordinateurs de la régulation) et inséré dans le dossier papier.</p>
+    <p><strong>Les actes réalisés au bloc doivent être codés en CCAM :</strong></p>
+    <ol style="list-style-type: decimal">
+    <li><strong>SELECTIONNER UH DE TRAVAIL : 834 BLOC CHIR GYNECO</strong></li>
+    <li>RENTRER IPP DE LA PATIENTE</li>
+    <li>VERIFIER LA DATE DE L’ACTE</li>
+    <li>CODER LES ACTES :
+    <ul>
+    <li>JNJD002 IVG évac. ut. Gravide aspi. +/- curetage 1er trim.</li>
+    <li>JKLD001 pose 1 DIU</li>
+    <li>QZLA004 pose implant pharmaco sscut.</li>
+    </ul></li>
+    <li><strong>AJOUTER UH ANESTHESIE 835 pour l’acte d’IVG</strong></li>
+    </ol>
+    <p><strong>Les internes de gynéco. doivent faire la visite de sortie des patientes sous AG</strong> (les mardi et jeudi).</p>
+    <p><strong>Pour les IVG médicamenteuses</strong>, les patientes sont hospitalisées quelques heures le jour de la prise du misoprostol, du lundi au dimanche. <strong>Les internes de gynéco. doivent faire la visite de sortie des patientes.</strong></p>
+    <p><strong>Les prescriptions sont anticipées</strong> lors de la consultation dans le service (antalgiques, HCG en ville à 15 jours, RDV de consultation de contrôle à 15 jours).</p>
+    <p><strong>Une fiche explicative bleue intitulée « Prenez soin de vous » est à donner aux patientes lors de la sortie</strong>, elle reprend les différents conseils après une IVG médicamenteuse ou instrumentale, elle se trouve normalement dans le dossier.</p>
+    <p>Pour les IVG instrumentales sous AL, les interventions sont réalisées le matin du lundi au vendredi par les médecins de l’unité d’Orthogénie qui gèrent les sorties et les prescriptions.</p>
+    <p>Pour toute question Dr Emmanuelle Lhomme DECT : 15 766 <a href="mailto:emmanuelle.lhomme@aphp.fr" class="email">emmanuelle.lhomme@aphp.fr</a></p>
+    <br></br><br></br><br></br><br></br>
+    </div>
+    </div>
