@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+  <body>
+    <header></header>
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+              <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+            </li>
+          <li class="menu__group">
+              <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+            </li>
+            
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+<script src="/vendors/d3.V3.min.js"></script>
+<script type="text/javascript"charset="utf-8" src="/promo/promo.js">
+        
+    </script>
+      
+      <script src="main.js"></script>
+
+
+      
+  </body>
+
+
+</html>
+

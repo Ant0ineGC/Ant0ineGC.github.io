@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+
+  <body>
+  <main>
+    <header></header>
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+          </li>
+          <li class="menu__group">
+              <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+            </li>
+          <li class="menu__group">
+              <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+    <div id="section-fonctionnement-du-service" class="section level1">
+      <h1>FONCTIONNEMENT DU SERVICE</h1>
+      
+      <div id="section-chirurgie" class="section level3">
+      <h3>CHIRURGIE</h3>
+      <div class="knitr-options" data-fig-width="576" data-fig-height="460">
+      
+      </div>
+      <table class=" lightable-minimal" style="font-family: &quot;Trebuchet MS&quot;, verdana, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+      <thead>
+      <tr>
+      <td style="text-align:left; top:0; background-color: #FFFFFF;">
+      PU.PH
+      </td>
+      <td style="text-align:left; top:0; background-color: #FFFFFF;">
+       
+      </td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Pr Charles CHAPRON
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Pr Bruno BORGHESE
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      PH
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Antoine BOURRET
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Laetitia CAMPIN
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Hervé FOULOT
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Paul MARZOUK
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Guillaume PIERRE
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      MCU-PH
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Louis MARCELLIN
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      CCA/Assistants
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Carole ABO
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Antoine GAUDET CHARDONNET
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Florie PIROT
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      P. Attachés
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Amine BITITI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Fouzia DECUYPERE
+      </td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      
+      <div id="section-médecine-de-la-reproduction" class="section level3">
+      <h3>MÉDECINE DE LA REPRODUCTION</h3>
+      <div id="section-section-2" class="section level4">
+      <h4></h4>
+      <div class="knitr-options" data-fig-width="576" data-fig-height="460">
+      
+      </div>
+      <table class=" lightable-minimal" style="font-family: &quot;Trebuchet MS&quot;, verdana, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+      <thead>
+      <tr>
+      <td   style="text-align:left; top:0; background-color: #FFFFFF;">
+      PU.PH
+      </td>
+      <td   style="text-align:left; top:0; background-color: #FFFFFF;">
+      .
+      </td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Pr Pietro SANTULLI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      PH
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Chloé MAIGNIEN
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      CCA/Assistants
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Mathilde BOURDON
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Fleur KEFELIAN
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Sonia KOUNTCHINSKY
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Sarah BLAIS
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Asim ALWOHAIBI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Marion OUAZANA
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      PHC
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Sarah ESKENAZI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      P. Attachés
+      </td>
+      <td style="text-align:left;">
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Stéphane DOUARD
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Alessandra FUBINI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Vanessa GAYET
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Dr Anne MARSZALEK
+      </td>
+      </tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      <div id="section-internes-du-service" class="section level3">
+      <h3>INTERNES DU SERVICE</h3>
+      <div id="section-section-3" class="section level4">
+      <h4></h4>
+      <div class="knitr-options" data-fig-width="576" data-fig-height="460">
+      
+      </div>
+      <table class=" lightable-minimal" style="font-family: &quot;Trebuchet MS&quot;, verdana, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+      <thead>
+      <tr>
+      <td   style="text-align:left; top:0; background-color: #FFFFFF;">
+      .
+      </td>
+      <td   style="text-align:left; top:0; background-color: #FFFFFF;">
+      Interne
+      </td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+      <td style="text-align:left;">
+      Chirurgie gynecologique
+      </td>
+      <td style="text-align:left;">
+      Charlotte BENEDETTI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Alexandre CHAMOUNI
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Doriane HOUDRE
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Eya JAAFAR
+      </td>
+      </tr>
+      <tr>
+        <td style="text-align:left;">
+        </td>
+        <td style="text-align:left;">
+        Rajae KARIMI
+        </td>
+        </tr>
+        <tr>
+        <td style="text-align:left;">
+        </td>
+        <td style="text-align:left;">
+        Anthony TUIL
+        </td>
+        </tr>
+      <tr>
+      <td style="text-align:left;">
+      Medecine générale
+      </td>
+      <td style="text-align:left;">
+      Aziz GUELLICH
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Juliette IDOUX
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      Medecine de la reproduction
+      </td>
+      <td style="text-align:left;">
+      Laura DIJOLS
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Rami EL HACHEM
+      </td>
+      </tr>
+      <tr>
+      <td style="text-align:left;">
+      </td>
+      <td style="text-align:left;">
+      Camille GUIHARD
+      </td>
+      </tr>
+      </tbody>
+      </table>
+      <p><a href="promo.html">Anciennes promotions d’internes</a></p>
+      </div>
+      </div>
+      
+      <div id="section-présentation-du-service" class="section level3">
+      <h3>PRÉSENTATION DU SERVICE</h3>
+      <div id="section-le-bloc-opératoire" class="section level4">
+      <h4>Le bloc opératoire</h4>
+      <p>L’activité chirurgicale couvre l’ensemble des techniques opératoires susceptibles d’être effectuées en chirurgie gynécologique (endoscopie opératoire : cœliochirurgie ; hystéroscopie opératoire ; chirurgie vaginale ; laparotomie) dans tous les domaines de la spécialité (cancérologie, douleurs abdomino-pelviennes, symptomatologie fonctionnelle hémorragique, prolapsus, infertilité)</p>
+      <p>Les internes sont présents <strong>tous les jours au bloc opératoire</strong>.</p>
+      <p>Leur participation à plein temps à l’activité opératoire est l’objectif prioritaire de ce stage.</p>
+      <p>Le programme froid est réparti sur trois salles :</p>
+      <ul>
+      <li>Salle 2 et 3 du lundi au vendredi : <strong>8 h à 18 h</strong></li>
+      <li><strong>Salle 1 Robot</strong> le mercredi : <strong>8 h à 18 h</strong></li>
+      <li>UCA salle 4 du lundi au vendredi : <strong>8 h à 17 h</strong></li>
+      </ul>
+      <p>Chaque opérateur à un jour fixe (voir planning) et le programme froid est validé une semaine à l’avance au cours du staff opératoire assuré le mardi par le <strong>Dr Paul MARZOUK</strong></p>
+      </div>
+      <div id="section-lhospitalisation" class="section level4">
+      <h4>L’hospitalisation</h4>
+      <p>Le service comprend 28 lits d’hospitalisation traditionnelle,</p>
+      <p>Une <strong>visite le matin</strong> et une <strong>contre-visite le soir</strong> sont effectuées <strong>tous les jours, week-end compris</strong>.</p>
+      <p>Durant la semaine, <strong>la visite commence le matin impérativement à 7h10 avec les externes et infirmières</strong>, afin que toutes les consignes aient été données et tous les problèmes réglés pour <strong>7h50 au plus tard</strong>.</p>
+      <p>Toutes les patientes opérées en ambulatoire (HdJ) doivent avoir été vues avant leur intervention.</p>
+      <p>La contre-visite se fait en fin d’après-midi. Elle doit être terminée avant 19h.</p>
+      <p><strong>La contre-visite en Hôpital de jour doit être faite par l’interne de l’UCA.</strong></p>
+      <p>Le samedi matin la visite se fait impérativement à 8 h et doit être terminée avant le début de du staff de la garde du samedi à 9h00.</p>
+      <p>La visite du dimanche et les contre-visites du week-end sont effectuées par l’interne de garde de gynécologie (BIP2). Attention pour les week-ends de garde assuré par les internes de PMA, <strong>les internes de chirurgie viennent faire la visite le matin (samedi et/ou dimanche)</strong>.</p>
+      <p>Chaque jour sont désignés pour l’hospitalisation et la gestion des urgences :</p>
+      <ul>
+      <li>Un senior d’astreinte responsable.</li>
+      <li>Un interne d’astreinte qui a le BIP de gynécologie (15 426).</li>
+      </ul>
+      <p>Un planning de répartition (bloc / astreinte / absence / vacance) des internes et des séniors est demandé au minimum au début de chaque mois pour affichage en salle de staff de gynécologie.</p>
+      </div>
+      <div id="section-les-staffs" class="section level4">
+      <h4>Les staffs :</h4>
+      <ul>
+      <li><strong>Le staff chirurgical</strong> : tous les matins à 7h50 (précise) en salle de réunion du Rdj salle 3: cf. Fonctionnement des urgences.</li>
+      <li><strong>Le staff opératoire</strong> : tous les mardis à 17 heures à la chefferie de service.</li>
+      <li><strong>Le staff de cancérologie</strong> : tous les jeudis matins de 8 heures à 9 h (les blocs de chirurgie commencent à 9 heures).</li>
+      </ul>
+      <p><strong>Présence obligatoire pour tous les internes</strong> : RDJ salle 3.</p>
+      <p>À cette réunion participent, outre les membres du service (gynécologues, cadres, assistante sociale, psychologue…), les oncologues médicaux, les anatomopathologistes, les radiologues, les radiothérapeutes.</p>
+      </div>
+      <div id="enseignement-et-recherche" class="section level4">
+      <h4>Enseignement et Recherche :</h4>
+      <ul>
+      <li>Cours à tous les internes du service
+      <ul>
+      <li>Organisés en salle de réunion de la chefferie du 2e étage</li>
+      <li><strong>tous les mardis à 18 heures</strong>.</li>
+      <li>Responsable : Dr Mathilde BOURDON.</li>
+      </ul></li>
+      <li>Organisation dans le service de deux diplômes universitaires :</li>
+      <li>DU de Gynécologie de l’infertilité et AMP (Pr SANTULLI)</li>
+      <li>DU de ménopause (Pr PLU BUREAU)</li>
+      <li>De nombreux travaux scientifiques sont en cours ou en préparation.</li>
+      </ul>
+      <p>Les internes intéressés, soit pour participer à une publication scientifique, soit pour faire leur thèse ou bien rédiger leur mémoire de DES, doivent se manifester en début de semestre.</p>
+      </div>
+      </div>
+      <div id="section-répartition-des-internes" class="section level3">
+      <h3>RÉPARTITION DES INTERNES</h3>
+      <p><strong>Un planning</strong> de la répartition des internes doit être effectué AU MINIMUN tous les mois, transmis au <strong>Pr BORGHESE</strong> pour affichage en salle de staff</p>
+      <div id="section-interne-de-bip" class="section level4">
+      <h4>Interne de BIP</h4>
+      <p>Il garde le DECT (15426)</p>
+      <p>Gère les problèmes en journée des salles d’hospitalisation et des urgences <strong>pour toute la semaine</strong> du lundi 8 heures jusqu’au samedi 12 heures.</p>
+      <p>Pour les patientes enceintes le terme maximum des patientes gérées par le service de gynécologie aux urgences = 14+ 6 SA. Au-delà de 15 SA, c’est l’équipe d’obstétrique qui prend le relai.</p>
+      <p>Est disponible pour des avis ou voir les patientes se présentant aux consultations post-urgences</p>
+      <p>Travaille en étroite collaboration avec le senior responsable de l’astreinte pour régler les problèmes médico-chirurgicaux et la gestion des lits.</p>
+      <p>Au cours d’une même semaine, ce poste doit être assuré tous les jours <strong>par le même interne</strong>. Cette condition est indispensable au bon fonctionnement du service et à une meilleure gestion du suivi postopératoire.</p>
+      </div>
+      <div id="section-internes-de-bloc" class="section level4">
+      <h4>Internes de bloc :</h4>
+      <p>Ils se répartissent au bloc les salles 1 et 2 et UCA</p>
+      <p>Les internes de bloc sont responsables de la rédaction des CRH des patientes qu’ils ont opérées sur le logiciel <a href="manuel%20Orbis.pdf">Orbis</a> (accessible sur n’importe quel poste).</p>
+      <p>IVG : Les <strong>mardis</strong>, ainsi qu’<strong>un vendredi par mois</strong> les internes de gynécologies sont responsables des <strong>IVG de 8H à 11H</strong>. Les patientes doivent être codées sur CCAM avec l’Identifiant : CHAPR code : Charles, et le compte rendu opératoire doit être fait entrant la date des dernières règles.</p>
+      </div>
+      </div>
+      <div id="section-activités-des-internes" class="section level3">
+      <h3>ACTIVITÉS DES INTERNES</h3>
+      <div id="section-activités-de-linterne-responsable-de-la-salle" class="section level4">
+      <h4>ACTIVITÉS DE L’INTERNE RESPONSABLE DE LA SALLE</h4>
+      <p><strong>Les internes sont affectés à une salle d’hospitalisation pour l’ensemble du semestre</strong>.</p>
+      <p><strong>CCA responsables de salle :</strong></p>
+      <ul>
+      <li>Dr ABO / Dr GAUDET CHARDONNET salle René MUSSET</li>
+      <li>Dr PIROT salle Raoul PALMER</li>
+      </ul>
+      </div>
+      <div id="section-la-visite" class="section level4">
+      <h4>La visite</h4>
+      <p>La visite doit être effectuée par le même interne sur une semaine avec l’infirmière responsable de la salle et un externe.</p>
+      <p>Elle démarre à 7h10 précises. Le CCA de la salle est présent à partir de 7 h 30 pour voir les patientes hospitalisées pendant la garde et les patientes opérées nécessitant un avis séniorisé. Les dossiers de ces patientes pourront ainsi être discutés efficacement au staff quotidien à 7 h 50.</p>
+      <p>Le samedi matin la visite a lieu à 8 h, avant le début du staff commun de gynécologie et d’Obstétrique à 9 h au RJ.</p>
+      <p>Le dimanche matin elle est effectuée par l’interne de gynécologie qui est de garde.</p>
+      <p>Au cours de cette visite, les prescriptions journalières sont retranscrites sur le logiciel Actipidos et les examens complémentaires récupérés.</p>
+      <p>Les externes aident à récupérer les examens complémentaires à mettre à jour les questionnaires épidémiologiques et les dossiers médicaux.</p>
+      <p>Pour chaque patiente un mot d’évolution biquotidien (date et heure) (visite et CV) ainsi qu’un mot de sortie doit inscrits dans le dossier <a href="manuel%20Orbis.pdf">Orbis</a>.</p>
+      <p>Les ordonnances et papiers de sortie sont également faits durant la visite, ils ont au mieux été préparés la veille durant la contre-visite.</p>
+      <p>Si besoin d’une échographie pelvienne (3 box d’échographie gynéco au 2e étage)</p>
+      <ul>
+      <li>Dr Joëlle UZAN-AUGUI, disponible pour les patientes hospitalisées,</li>
+      <li>Vacation d’échographie référent pelvienne tous les après-midi à partir de 14h00</li>
+      </ul>
+      <p>En cas de complication postopératoire (week-end compris), le chef de clinique d’astreinte et le médecin qui a opéré la patiente doivent impérativement être prévenus.</p>
+      <p><strong>Vous devez impérativement respecter les dates de sortie déjà fixées par le chirurgien et validées au cours du staff opératoire</strong> et spécifiées dans le planning des lits.</p>
+      <p><strong>Toute décision de modification</strong> de date de sortie ne peut être <strong>prise que par l’opérateur</strong> de la patiente. En cas de patiente hospitalisée en urgence, mais non opérée, la décision de sortie ne peut être prise qu’en accord avec le CCA responsable de salle ou avec le sénior d’astreinte.</p>
+      </div>
+      <div id="section-la-contre-visite" class="section level4">
+      <h4>La contre-visite</h4>
+      <p>Elle doit être faite tous les jours de la semaine en fin d’après-midi <strong>avant 19 heures</strong> par l’interne responsable de la salle. Attention <strong>la garde commence à 18 heures</strong>.</p>
+      <p>Durant le week-end elle est effectuée par l’interne de gynécologie qui se libère entre 18h et 19 h pour faire la contre-visite.</p>
+      <p>La contre-visite permet de voir les patientes déjà opérées ainsi que les patientes qui seront opérées le lendemain.</p>
+      <p><strong>Les prescriptions préopératoires</strong> (misprostol, Normacol, hCG urinaires…) doivent être effectuées avec un mot d’entrée dans le dossier : la <strong>date des dernières règles</strong> et un <strong>traitement hormonal en cours</strong> doivent systématiquement être précisés.</p>
+      <p>Lors de la contre-visite, l’interne doit, pour chaque femme ≤ 42 ans ayant subi une cœlioscopie ou une laparotomie, vérifier la <strong>fiche épidémiologique</strong> et s’assurer qu’elle est correctement remplie par le chirurgien.</p>
+      <p>Cette contre-visite permet également de faire les éventuelles sorties (curetage, hystéroscopie…) et de préparer celles du lendemain.</p>
+      <p>En cas de problème, il faut en informer le chef d’astreinte, week-end compris.</p>
+      <p>En pratique, la veille de l’intervention, il faut vérifier et/ou prescrire :</p>
+      <ul>
+      <li><strong>hCG urinaires</strong> : DDR à mentionner impérativement dans le dossier</li>
+      <li><strong>Traitement médical habituel</strong> : Préciser impérativement le type de traitement hormonal</li>
+      <li><strong>ECBU</strong> avant chaque cure de prolapsus ou une montée de JJ ou de cure d’IUE type TOT</li>
+      <li><strong>Atarax 25 mg</strong> si besoin</li>
+      <li><strong>Paracétamol</strong> : 1g*4 / jour si douleur</li>
+      </ul>
+      <p><strong>À vérifier et à retranscrire dans le mot d’évolution <a href="manuel%20Orbis.pdf">Orbis</a></strong> :</p>
+      <ul>
+      <li>Consultation d’anesthésie</li>
+      <li>DDR pour toute patiente non ménopausée</li>
+      <li>consentement signé</li>
+      <li>NFS, plaquettes</li>
+      </ul>
+      </div>
+      <div id="section-les-consignes-postopératoires" class="section level4">
+      <h4>Les Consignes postopératoires :</h4>
+      <ul>
+      <li>Sonde urinaire
+      <ul>
+      <li>Ablation J1 avec ablation PCA Morphine : surveillance miction (à mentionner dans le dossier infirmier)</li>
+      <li>Ablation J1 (cure de prolapsus)</li>
+      <li>TOT : mesure des RPM</li>
+      </ul></li>
+      <li><strong>Compte rendu d’hospitalisation</strong> : cf. CR standardisé</li>
+      </ul>
+      <p><strong>Sa rédaction doit être extrêmement rigoureuse : la codification est assurée en se basant sur ce compte rendu. Il peut être rédigé par l’externe de la salle, mais reste sous la responsabilité de l’interne. Il doit être réalisé dans <a href="manuel%20Orbis.pdf">Orbis</a>.</strong></p>
+      <ul>
+      <li>Identité de la patiente avec date de naissance</li>
+      <li>Opérateur</li>
+      <li>Motif d’hospitalisation</li>
+      <li>Date d’intervention</li>
+      <li>Opérateur</li>
+      <li>Intitulé de l’intervention</li>
+      <li>Impérativement, renseigner les antécédents médico-chirurgicaux de toutes les patientes hospitalisées.</li>
+      <li>Suites opératoires : reprise du transit, ablation SU, taux d’hémoglobine et complications éventuelles….</li>
+      <li>Date de sortie</li>
+      <li>Rendez-vous post opératoire</li>
+      <li>Complications et incidents postopératoires.</li>
+      </ul>
+      <p>Durées indicatives d’arrêt de travail :</p>
+      <ul>
+      <li>Hystéroscopie : 24 h</li>
+      <li>Cœlioscopie infertilité : 8-10 jours</li>
+      <li>Hystérectomie cœlioscopie : 3 semaines</li>
+      <li>Myomectomie cœlioscopie : 3 semaines</li>
+      <li>Hystérectomie voie basse : 3 semaines</li>
+      <li>Hystérectomie / myomectomie laparotomie : 4 semaines</li>
+      <li>Cure de prolapsus : 1 mois.</li>
+      <li>Chirurgie cancérologique : 1 mois.</li>
+      </ul>
+      <p>Durées indicatives d’anti-coagulation : doit être indiqué clairement par l’anesthésiste le jour de l’intervention.</p>
+      <ul>
+      <li>Moins d’une heure : pas d’anti-coagulation</li>
+      <li>Annexectomie cœlio : 2 semaines (à discuter suivant opérateur)</li>
+      <li>Hystérectomie cœlio : 2 semaines</li>
+      <li>Kystectomie cœlio en fonction de la durée de l’intervention : 7 jours</li>
+      <li>Hystérectomie / myomectomie laparotomie : 30 jours</li>
+      <li>Curages pelviens : 30 jours</li>
+      <li>Cure de Prolapsus : 30 jours</li>
+      </ul>
+      <p><strong>Tardyféron</strong> : À ne pas oublier avec NFS plaquettes de contrôle</p>
+      <p><strong>Ablation des fils</strong> entre J7 et J10</p>
+      <p><strong>Agrafes</strong> entre J7 et J10.</p>
+      </div>
+      <div id="section-rendez-vous-post-opératoire" class="section level4">
+      <h4>Rendez-vous post opératoire :</h4>
+      <p>Document à remettre avec numéros de téléphone des secrétariats, ou dans le service auprès des secrétaires à la chefferie.</p>
+      </div>
+      <div id="section-les-sorties" class="section level4">
+      <h4>Les sorties</h4>
+      <p>L’interne fait avec l’aide de l’externe les papiers de sortie des patientes hospitalisées.</p>
+      <p>Le jour de la sortie des patientes opérées a déjà été fixé par le chirurgien lors de la consultation préopératoire et il faut <strong>impérativement</strong> s’y conformer (se référer au tableau d’occupation des lits actualisé quotidiennement par les cadres d’hospitalisation).</p>
+      <p>En cas de problème nécessitant de prolonger le séjour d’une patiente, l’interne doit obligatoirement en informer l’opérateur de la patiente et le cadre infirmier.</p>
+      <p>Les patientes doivent aller au secrétariat de leur chirurgien pour prendre leur rdv post opératoire avant la sortie. Sinon, un document de sortie avec les numéros du chirurgien responsable doit être remis à la patiente.</p>
+      <p>Aucune prescription d’ambulance ne peut être faite sans l’accord du senior responsable de la patiente.</p>
+      </div>
+      </div>
+      <div id="section-activités-des-internes-au-bloc-opératoire" class="section level3">
+      <h3>ACTIVITÉS DES INTERNES AU BLOC OPÉRATOIRE</h3>
+      <p>Les trois internes présents au bloc opératoire se répartissent chacun dans une des salles.</p>
+      <p>Ils participent comme aides ou comme opérateurs sur les interventions programmées et/ou sur les urgences.</p>
+      <p><strong>La feuille d’anatomopathologie</strong> doit être remplie avant chaque intervention</p>
+      <p><strong>À la fin de chaque intervention, ils doivent :</strong></p>
+      <ul>
+      <li>Conclure la feuille d’anatomopathologie</li>
+      <li>Coder sur l’ordinateur du bloc les actes CCAM des IVG, curetage et bartholinite.</li>
+      <li>L’interne du bloc UCA code le PMSI</li>
+      <li><strong>Un CRH doit impérativement être fait pour toute hospitalisation</strong></li>
+      <li><strong>Écrire un mot</strong> résumant brièvement l’intervention dans le dossier médical (<a href="manuel%20Orbis.pdf">Orbis</a>) (gestes effectués, drains éventuels, mèche, SU, pertes sanguines, etc..)</li>
+      </ul>
+      <p>Le compte rendu opératoire et le codage CCAM sont à la charge de l’opérateur principal</p>
+      </div>
+      <div id="section-fonctionnement-des-urgences" class="section level3">
+      <h3>FONCTIONNEMENT DES URGENCES</h3>
+      <div id="section-effectif-médical-dédié-aux-urgences-gynécologiques" class="section level4">
+      <h4>Effectif médical dédié aux urgences gynécologiques:</h4>
+      <ul>
+      <li>2 étudiants hospitaliers</li>
+      <li>1 interne DES de médecine générale (DECT 13 945)</li>
+      <li>1 interne DES de gynécologie obstétrique (DECT 15 426).</li>
+      <li>1 sénior d’astreinte (CCA ou PH)</li>
+      <li>1 praticien hospitalier (PH) responsable : Dr BOURRET (DECT 15 467).</li>
+      </ul>
+      </div>
+      <div id="section-principe-daccueil-des-patientes-aux-urgences-gynécologiques" class="section level4">
+      <h4>Principe d’accueil des patientes aux urgences gynécologiques :</h4>
+      <p>La gestion des urgences gynécologiques est sous la responsabilité de l’interne DES en gynécologie obstétrique affecté aux urgences.</p>
+      <p>Les protocoles de gestion des urgences gynécologiques (fausses couches spontanées, grossesses extra-utérines, infections génitales hautes…) doivent être respectés scrupuleusement pour uniformiser les prises en charge.</p>
+      <p>Ce document est disponible sur les ordinateurs des urgences, dans le dossier commun.</p>
+      <p>Pour chaque patiente se présentant aux urgences, le dossier des urgences gynécologiques (dossier informatisé Urgyn) doit être rempli avec précision.</p>
+      <p>Urgyn est situé dans les applicatifs web, dans le domaine patient. Il est accessible depuis tous les postes du groupe hospitalier reliés à l’intranet.</p>
+      <p>Votre identifiant est votre code APH et le mot de passe est votre nom de famille en minuscule.</p>
+      <p>Urgyn permet de rédiger les ordonnances et le courrier de synthèse de passage.</p>
+      <p>À l’issue de la consultation d’urgence, un courrier type doit être édité pour le médecin traitant, document rédigé à partir du courrier type des urgences gynécologiques.</p>
+      <p><strong>Tout passage aux urgences (y compris un simple contrôle des hCG) nécessite une fiche Urgyn ou au minimum quelques lignes manuscrites sur la fiche Urgyn initiale</strong></p>
+      </div>
+      <div id="section-staff-des-urgences" class="section level4">
+      <h4>Staff des urgences :</h4>
+      <p><strong>Date</strong> : Il est intégré au staff chirurgical qui a lieu tous les matins du lundi au vendredi.</p>
+      <p><strong>Horaire</strong> : de 7 h 50 à 8 h 00 (sauf le jeudi : la RCP cancérologie débute impérativement 8 h 00).</p>
+      <p><strong>Lieu</strong> : Salle de staff, Rez-de-jardin du Bâtiment Port-Royal.</p>
+      <p><strong>Personnels impérativement présents</strong> : l’équipe de la garde précédente (2 Séniors, 2 internes, 2 externes), les internes DES de Gynécologie Obstétrique, les internes DES de Médecine Générale, l’ensemble des externes et un cadre d’hospitalisation (traditionnelle et de jour) le Sénior qui prend l’astreinte de la journée et les CCA. Le Staff est assuré par :</p>
+      <ul>
+      <li>Lundi : Paul Marzouk</li>
+      <li>Mardi : Louis Marcellin</li>
+      <li>Mercredi : Antoine Bourret</li>
+      <li>Jeudi : Bruno Borghese</li>
+      <li>Vendredi : Laetitia Campin/Guillaume Pierre</li>
+      </ul>
+      <p>Les dossiers des patientes hospitalisées en urgence depuis le staff précédent sont présentés par l’externe ou l’interne ayant pris en charge la patiente. En cas de nécessité d’intervention, la patiente sera opérée par le sénior d’astreinte du jour et sera intercalée dans le programme opératoire en fonction du degré d’urgence. Une étiquette doit être disposée dans le cahier d’activité des hospitalisations en urgence. Ce cahier est laissé dans la salle de staff. Il est indispensable au Dr BOURRET afin de bien veiller au codage et à l’évaluation de l’activité des urgences du service.</p>
+      <p>Les dossiers de toutes les patientes ayant consulté aux urgences la veille et qui n’ont pas été hospitalisées sont tous revus avant le staff et validés.</p>
+      <p>L’ensemble des dossiers des patientes hospitalisées est passé en revue afin de régler des problèmes médicaux éventuels. Cela implique que les internes DES en Gynécologie-Obstétrique aient fait la visite des patientes dont ils ont la responsabilité avant 7h50, avec les CCA responsables de salle.</p>
+      <p>Le staff doit être terminé à 8 h 10 pour que les opérateurs du jour puissent <strong>débuter les interventions à 8 h 15 précises +++</strong>.</p>
+      </div>
+      <div id="section-principes-généraux-de-fonctionnement-des-urgences-gynécologiques" class="section level4">
+      <h4>Principes généraux de fonctionnement des urgences gynécologiques</h4>
+      <p><strong>Priorité</strong> : limiter le temps d’attente aux urgences.</p>
+      <p><strong>Objectif</strong> : toute patiente doit être vue par un membre de l’équipe médicale dans les 20 minutes suivant son arrivée.</p>
+      <p><strong>Stratégie</strong> : la patiente doit ’’être classée’’ dans l’une des trois catégories suivantes :</p>
+      <ul>
+      <li>Hospitalisation et passage « rapide » au bloc pour une intervention en « urgence</li>
+      <li>Hospitalisation en « chirurgie traditionnelle » pour bilan complémentaire et décision : soit sortie et retour au domicile, soit chirurgie avec intervention « différée », le plus souvent le lendemain.</li>
+      <li>Consultation puis retour à domicile.</li>
+      </ul>
+      <p>En cas d’hospitalisation, contacter le cadre d’hospitalisation (Mme ODIC DECT 15238), puis en référer au sénior d’astreinte (cf. planning astreintes)</p>
+      <p>Les bilans biologiques pour les patientes vues aux urgences sont effectués soit en externe (la patiente ramène les résultats à la consultation post urgence), soit en hospitalisation.</p>
+      <p>Il est néanmoins possible de demander la réalisation d’examens complémentaires aux urgences dans les cas suivants :</p>
+      <ul>
+      <li>hCG plasmatiques (GLI, GEU, etc.)</li>
+      <li>bilan préméthotrexate</li>
+      <li>Rhésus en cas de métrorragies du premier trimestre</li>
+      <li>bilan infectieux + inflammatoire en cas d‘IGH.</li>
+      </ul>
+      <p><strong>Automate pour hCG plasmatiques</strong> : un automate est mis à disposition par le service de biologie aux urgences gynécologiques. Il a l’intérêt de donner un résultat rapide (moins de 20 minutes), mais a un coût supérieur aux hCG classiques : <strong>coût multiplié par 5</strong>.</p>
+      <p>L’utilisation de cet appareil est destinée aux patientes pour lesquelles le résultat conditionne le retour à domicile (GLI par exemple). Pour les autres patientes, le circuit classique (résultats en 2 h) est obligatoire.</p>
+      <p>Attention : cette technique ne permet pas d’analyse quantitative au-delà de 5000 UI.</p>
+      <p>Compte tenu de l’importance des temps d’attente des patientes (temps de prélèvement, temps de récupération des résultats), des coûts d’examens systématiques inutiles et des difficultés de récupération des résultats, le <strong>MINIMUM</strong> d’examens complémentaires doit être réalisé aux urgences.</p>
+      </div>
+      <div id="section-nécessité-dun-avis-chirurgical-de-sénior-aux-urgences" class="section level4">
+      <h4>Nécessité d’un avis chirurgical de sénior aux urgences :</h4>
+      <p>En cas de besoin d’avis de sénior, l’interne DES de Gynécologie-Obstétrique se déplace au bloc opératoire avec le dossier complet pour le présenter au sénior d’astreinte pour les urgences (planning établi à l’avance : 1 sénior par jour).</p>
+      </div>
+      <div id="section-sortie-des-urgences-gynécologiques" class="section level4">
+      <h4>Sortie des urgences gynécologiques :</h4>
+      <p>Plusieurs cas de figure sont possibles :</p>
+      <ul>
+      <li><p><strong>Retour simple au domicile sans nécessité de rendez-vous gynécologique</strong> : Un courrier est systématiquement adressé au médecin traitant. La patiente quitte le service avec un double de la lettre pour son médecin traitant et ses ordonnances éventuelles.</p></li>
+      <li><p><strong>Nécessité de suivi gynécologique en ambulatoire</strong> (grossesse de localisation incertaine, suivi du traitement médical d’une grossesse extra-utérine … ) : donner un rendez-vous en consultation post urgences. Un courrier est systématiquement adressé au médecin traitant. La patiente quitte le service avec un double du dossier des urgences et ses ordonnances éventuelles, et la date et l’heure de son prochain rendez-vous.</p></li>
+      <li><p><strong>Nécessité d’une prise en charge gynécologique</strong> (bilan +/- intervention chirurgicale non urgente) : la patiente doit repartir au domicile avec un rendez-vous avec le senior d’astreinte du jour. Un courrier est systématiquement adressé au médecin traitant. La patiente quitte le service avec un double de la lettre pour son médecin traitant, ainsi que sa convocation avec le sénior d’astreinte et ses ordonnances éventuelles.</p></li>
+      </ul>
+      </div>
+      <div id="section-programmation-des-blocs-et-hospitalisations-des-patientes" class="section level4">
+      <h4>Programmation des blocs et Hospitalisations des patientes</h4>
+      <ul>
+      <li>Pour les consultations d’anesthésie (programmation d’une fausse couche non urgente par exemple) appeler en première intention l’anesthésiste en consultation qui rajoutera la patiente à sa consultation si possible. Dans ce cas, voir avec l’anesthésiste de gynécologie (DECT 13951). Pour programmer, si ASA 1, pas d’obligation d’attendre les 48 h « légales » pour programmer au bloc (vu avec Dr F. Toubas). Elle peut être programmée dès le jour même ou le lendemain (à voir avec les cadres de bloc).</li>
+      <li>Appeler cadre de santé d’hospitalisation (13 658).</li>
+      <li>Poste infirmier : Aile MUSSET 13 664, Aile PALMER 13 656.</li>
+      <li>Faire monter la patiente dans le service pour la préparation. Le bilan préopératoire et la voie veineuse périphérique, peuvent être effectués en hospitalisation en cas de forte affluence aux urgences et de patiente stable SAUF pour les grossesses extra-utérines qui doivent monter perfusées. La patiente est laissée à jeun.</li>
+      <li><strong>Faxer la demande de bloc au 13 689</strong></li>
+      <li>Si passage au bloc en urgence, appeler le Brancardier 13 949 et l’IBODE (si garde de nuit au 13 948), ou M MOMPEROUSSE : 15432 ou Mme MENDY 11634 ou Mme DE MOYA 13 687 (si pendant la journée)</li>
+      </ul>
+      </div>
+      <div id="section-gardes-et-astreintes" class="section level4">
+      <h4>Gardes et astreintes :</h4>
+      <p>Les internes de gynécologie ne prennent leur garde en obstétrique qu’une fois l’ensemble du travail du service effectué : blocs opératoires terminés, contre-visites faites, sorties effectuées en hôpital de jour. Le principe retenu est que la garde d’obstétrique, selon les besoins en gynécologie, commence à 18h00.</p>
+      <p><strong>Le WE</strong>, la prise en charge des problèmes de gynécologie est assurée par le sénior de chirurgie gynécologique d’astreinte. Celui-ci voit tous les dossiers des urgences gynécologiques des 24 dernières heures lors du staff commun gynéco-obstétrique.</p>
+      <p>Tout dysfonctionnement aux urgences gynécologiques est à communiquer au Docteur BOURRET</p>
+      </div>
+      <div id="section-les-consultations-post-urgences" class="section level4">
+      <h4>Les « consultations post-urgences »</h4>
+      <ul>
+      <li>Les patientes ayant un suivi régulier avec un gynécologue en ville sont invitées à reprendre contact avec lui. Sinon, proposer un rendez-vous post urgence.</li>
+      <li>Les rendez-vous post urgences sont données aux patientes directement aux urgences par l’interne.</li>
+      <li>Il s’agit des rendez-vous avec un sénior selon la personne d’astreinte ou de garde (voir la liste) ce jour-là (exemple : contrôle de kyste, métrorragies post ménopausique, etc.). Le but est que les patientes repartent des urgences avec leur rendez-vous fixé.</li>
+      <li>une ligne de rendez-vous post urgences dans le logiciel <a href="manuel%20Orbis.pdf">Orbis</a> (misprostol, métho etc.) a été créé 3 après-midi par semaine afin de gérer les flux. Cette consultation est assurée par les internes de gynécologie et de médecine générale. D’autres patientes sont reconvoquées directement aux urgences si les créneaux disponibles ne sont pas compatibles avec lune surveillance adaptée. Pour les patientes reconvoquées aux urgences, il existe un « cahier des reconvoquées » dans lequel une étiquette de la patiente doit être placée. Il est indispensable de s’assurer en début de garde que les patientes qui devaient être revues se soient effectivement présentées dans la journée. Sinon, les appeler.</li>
+      </ul>
+      <p>Vos droits informatiques sont donc ouverts pour accéder à cet applicatif qui vous permet :</p>
+      <ul>
+      <li>de programmer les patientes reconvoquées aux urgences (agenda GYN URG).</li>
+      </ul>
+      <p>Les codes des internes sont faits pour l’application Orbis et sont valides jusqu’à la fin de votre semestre. Vous devriez vous connecter avec votre identifiant et le mot de passe est 12345678. Vous devrez modifier ce mot de passe en allant sur Administration / Modif mot de passe.</p>
+      <p>En saisissant le rendez-vous, il existe une icône qui permet d’imprimer une convocation. Merci d’imprimer cette convocation et de la mettre sous enveloppe pour l’envoyer à la patiente (si elle revient dans 48 h, lui donner directement bien sûr !).</p>
+      </div>
+      <div id="section-avis-gynécologie-médicale" class="section level4">
+      <h4>Avis Gynécologie médicale</h4>
+      <p>L’équipe de Gynécologie Médicale est disponible pour participer à la gestion des urgences. Les modalités de cette collaboration qui peuvent vous être très utiles sont les suivantes :</p>
+      <ul>
+      <li>Contraception difficile (antécédents particuliers, tabagisme…)</li>
+      <li>Sénologie</li>
+      <li>Douleurs pelviennes ou saignements sans contexte chirurgical</li>
+      <li>Post-partum après J 28,</li>
+      </ul>
+      <p>Vous pouvez appeler l’interne de gynécologie médicale au <strong>15 501</strong> pour un avis.</p>
+      <p>En cas de nécessité, ces avis seront séniorisés par un chef de l’équipe du Professeur Plu Bureau.</p>
+      <p>En cas de souci le week-end ou sur la garde, vous pouvez mettre le dossier de côté pour qu’il soit présenté au staff et confié à l’équipe de gynécologie médicale pour une prise en charge ultérieure adaptée.</p>
+      </div>
+      <div id="section-patientes-suivies-en-médecine-de-la-reproduction" class="section level4">
+      <h4>Patientes suivies en Médecine de la Reproduction</h4>
+      <p>Les patientes suivies en Médecine de la Reproduction nécessitant un avis en urgence doivent être en priorité orientées vers le service de Médecine de la Reproduction qui souhaite assurer le suivi de ses patientes.</p>
+      <p>Aussi, une patiente vue aux urgences en dehors des heures d’ouverture de Médecine de la Reproduction (week-end, nuit) doit être invitée à faire son suivi (GLI par exemple) en Médecine de la Reproduction : les patientes peuvent être vues sur place, tous les matins du lundi au vendredi par un des internes de Médecine de la Reproduction.</p>
+      </div>
+      </div>
+      <div id="section-codage-pmsi" class="section level3">
+      <h3>CODAGE PMSI</h3>
+      <p><strong>Pour les patientes non opérées</strong> (embolisation des artères utérines, patiente récusée, hospitalisation pour surveillance sans intervention chirurgicale…) <strong>UN COMPTE RENDU D’HOSPITALISATION DOIT ÊTRE IMPÉRATIVEMENT FAIT AVANT LA SORTIE</strong>, en notant les antécédents médico-chirurgicaux, le motif d’hospitalisation, ainsi que les suites opératoires</p>
+      <p>Le codage des actes est fait par le chirurgien responsable de la patiente:</p>
+      <ul>
+      <li><strong>CCAM</strong> pour les actes (Nom d’utilisateur : CHAPR ; mot de passe : charles)</li>
+      </ul>
+      <p>Le codage du PMSI des patientes opérées à l’UCA est fait par l’interne en fin d’intervention</p>
+      <p>Les principaux actes sont affichés dans l’ordinateur afin de faciliter la saisie des données.</p>
+      <p>En cas de difficultés de codage (problème de code ou patiente non présente sur l’ordinateur) contacter le Dr CAMPIN</p>
+      </div>
+      <div id="section-autres-questions-dorganisation" class="section level3">
+      <h3>AUTRES QUESTIONS D’ORGANISATION</h3>
+      <p><strong>Les vacances</strong></p>
+      <p>L’organisation des vacances doit être anticipée pour que chacun puisse dans la mesure du possible partie aux dates qu’il souhaite.</p>
+      <p>Les dates de vos vacances doivent être communiquées au Pr Borghese.</p>
+      <p>Au mois d’août, le bloc opératoire est fermé. Il suffit donc d’un interne par jour pour assurer les consultations d’urgence éventuelles, et de deux ou trois internes pour assurer les gardes.</p>
+      
+<br></br><br></br>
+    </div>
+      </div>
+  </main>
+<footer></footer>
+
+      <script src="main.js"></script>
+  </body>
+</html>

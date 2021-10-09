@@ -1,18 +1,18 @@
 Code , Intitulé
 
-**ASPIRATION**,
+<b>ASPIRATION</b>,
 JNJD002 , évac. ut. gravide aspi. +/- curetage 1er trim. 
 JNJP001 , évac. ut. gravide moy. médict 1er trim. 
 JNMD001 , révision cav. ut. après avort. 
 
-**TORSION ANNEXE**,
+<b>TORSION ANNEXE</b>,
 ZCQC002 , explo. cav. abd. coelio. 
 ZCQA001 , laparo explo 
 JJEC001 , détorsion annexe coelio. 
 JJFC003 , kystectomie ovarienne périt. coelio.  
 JJFC010 , salpingoovariectomie coelio.
 JJFC008 , ovariectomie unilat. coelio. 
-**GEU**,
+<b>GEU</b>,
 JJFC001 , salpingectomie pr G.E.U coelio. 
 JJJC002 , expression tubaire G.E.U coelio. 
 JJLJ001 , inj. intraovulaire pr G.E.U v.basse +guid écho 
@@ -20,31 +20,31 @@ JJJA002 , expression tubaire G.E.U laparo
 JJFA001 , salpingectomie pr G.E.U laparo 
 JJPA001 , salpingotomie +aspi. G.E.U laparo 
 JJPC001 , salpingotomie +aspi. G.E.U coelio.
-**PELVI-PERITONITE**,
+<b>PELVI-PERITONITE</b>,
 ZZHJ003 , pct 1org. prof. sur 1cible v. cav. +guid écho 
 JJJC001 , évac. collection annexe/lig. large coelio. 
 ZCJC001 , évac. collection abdo. coelio 
 QZJA011 , évac. collection prof. ab. direct 
 HHFA016 , appendicectomie coelio/laparo +prépa. coelio. 
-**VULVE**,
+<b>VULVE</b>,
 JMPA001 , incision glde Bartholin 
 JLFA002 , exérèse lés. vag. 
 JLCA008 , suture vag. 
 JLJB001 , évac. collection paroi vag/vulve v.basse/transcut. 
 JMFA001 , exérèse glde Bartholin 
-**SEIN**,
+<b>SEIN</b>,
 QEJA001 , évac. collection gld mamm. ab. direct 
 QEHB001 , pct lés. gld mamm. transcut. sans guid 
-**COL**,
+<b>COL</b>,
 JKCD001 , suture col ut. 
-**HYSTEROSCOPIE**,
+<b>HYSTEROSCOPIE</b>,
 JKNE001 , abrasion muq. ut. hystéroscopie 
 JKQE002 , hystéroscopie 
 JKQE001 , hystéroscopie +curetage cav. ut. 
 JKFE001 , polypectom. ut. hystéroscopie 
 JKFE002 , résec. myome ut. hystéroscopie 
 JKGD002 , curetage cav. ut. thérap. 
-**CONSULTATION**,
+<b>CONSULTATION</b>,
 JNQM001 , écho non morph. grosS av. 11semaines aménorrhée 
 ZCQM007 , écho pelvis féminin pr surv. ovulation 
 JKLD001 , pose 1DIU

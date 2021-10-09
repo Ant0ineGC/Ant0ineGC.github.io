@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="images/splashscreens/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="images/splashscreens/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
+
+  </head>
+
+
+  <body style="background-color:white;">
+  <main>
+    <header></header>
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+              <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+            </li>
+          <li class="menu__group">
+              <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+<div id="section-chirurgie" class="logo1">
+  <img src="images/Logo.png" alt="GyneCochin"> 
+</div>
+
+<div id="section-chirurgie" class="intro">
+
+<p>
+Cochin - Port-Royal
+</p>
+<p>
+<strong>SERVICE de GYNECOLOGIE-OBSTETRIQUE II ET MÉDECINE de la REPRODUCTION</strong>
+</p>
+<p>
+Chef de service : <strong>Professeur Charles Chapron</strong>
+</p>
+</div>
+
+<div id="section-chirurgie" class="logo">
+  <img src="images/Logo3.png" alt="GyneCochin"> 
+
+
+  <img src="images/Logo2.png" alt="GyneCochin"> 
+</div>
+</div>
+
+  </main>
+<footer></footer>
+
+
+
+      <script src="main.js"></script>
+
+
+
+
+  </body>
+</html>

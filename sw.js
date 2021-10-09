@@ -1,17 +1,47 @@
-const cacheName = 'veille-techno' + '1.2';
+const cacheName = '1.4.1';
 
 self.addEventListener('install', (evt) => {
     console.log(`sw installé à ${new Date().toLocaleTimeString()}`);       
     const cachePromise = caches.open(cacheName).then(cache => {
         return cache.addAll([
             'index.html',
+            'images/splashscreens/iphone5_splash.png',
+            'images/splashscreens/iphone6_splash.png',
+            'images/splashscreens/iphoneplus_splash.png',
+            'images/splashscreens/iphonex_splash.png',
+            'images/splashscreens/iphonexr_splash.png',
+            'images/splashscreens/iphonexsmax_splash.png',
+            'images/splashscreens/ipad_splash.png',
+            'images/splashscreens/ipadpro1_splash.png',
+            'images/splashscreens/ipadpro3_splash.png',
+            'images/splashscreens/ipadpro2_splash.png',
+            'fonctionnement.html',
             'bloc.html',
+            'bloc/bloc.csv',
+            'bloc/bloc.js',
             'style.css',
             'vendors/bootstrap4.min.css',
-            'add_techno.html',
-            'add_techno.js',
-            'contact.html',
-            'contact.js',
+            'GEU.html',
+            'ccam.html',
+            'IGH.html',
+            'vendors/d3.V3.min.js',
+            'cours.html',
+            'embolisation.html',
+            'FCS.html',
+            'vomissement.html',
+            'accueil.html',
+            'gardes.html',
+            'garde/garde.csv',
+            'garde/garde.js',
+            'num.html',
+            'images/Logo.png',
+            'images/Logo2.png',
+            'images/Logo3.png',
+            'images/IGH1.png',
+            'images/IGH2.png',
+            'images/IGH3.png',
+            'images/VG2.png',
+            'main.js',
             'orthogenie.html',
         ])
         .then(console.log('cache initialisé'))
@@ -65,3 +95,4 @@ self.addEventListener('fetch', evt => {
         .catch(err => caches.match(evt.request))
     );
 });
+

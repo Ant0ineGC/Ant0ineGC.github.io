@@ -1,0 +1,68 @@
+# Protocole Vomissements gravidiques du premier trimestre de grossesse
+
+### A l’arrivée aux urgences
+
+**Interrogatoire et examen clinique, penser à :** 
+
+- Rechercher comorbidités (diabète, insuffisance rénale, cardiopathie…)
+- Rechercher signes de gravité : déshydratation, perte de poids, malaise, choc hypovolémique
+- Eliminer diagnostics différentiels (notamment en cas de symptômes associés (fièvre, céphalées…)
+
+### Examens complémentaires
+
+- **Echographie obstétricale**  : évolutivité de la grossesse, recherche d’une grossesse multiple ou d’une grossesse molaire.
+- **Bilan biologique** : 
+
+    - NFS, plaquettes
+    - Ionogramme sanguin, urémie, créatininémie, ionogramme urinaire
+    - Bilan hépatique complet, lipasémie
+    - Calcémie, phosphorémie, magnésémie
+    - TSH, T4
+    - Glycémie
+
+A faire en ville en l’absence de signe clinique de gravité ou en hospitalisation au 2e étage si patiente hospitalisée. 
+Pas de bilan biologique aux urgences.
+
+- **ECG** : en cas de troubles hydro-électrolytiques
+
+### Prise en charge  à domicile
+
+En l’absence de signe de gravité et de comorbidité :
+
+- Règles hygiéno-diététiques : fractionnement des repas, éviction de certains aliments (trop gras, trop épicés ou au goût trop prononcé), apport hydrique suffisant 
+- Méthodes non médicamenteuses : gingembre, jus de citron, acupuncture
+- Traitements médicamenteux : 
+- En première intention : 
+    - métoclopramide (Primperan®  10mg x 3 /jour per os, en sub-lingual ou en suppositoire) ou 
+    - doxylamine (Donormyl® 15mg le soir)
+- En seconde intention : 
+    - doxylamine en association à la vitamine B6 (Cariban® : 2 gélules de 10mg le soir au coucher à J1. Si ce traitement est efficace sur les nausées du matin mais qu’il persiste des symptômes dans la journée, ajouter une gélule de 10mg le matin +- l’après-midi (dose maximale de 4 gélules par jour))
+    - En cas d’échec : ondansétron (Zophren®, Sétofilm®) 4mg x 3 / jour, possible après 10SA (risques malformatifs avant 10 SA).
+- Prise en charge psychologique à proposer
+- Informer la patiente sur les signes devant la faire consulter
+
+### Prise en charge hospitalière
+
+En cas de signe de gravité, de comorbidité (diabète, cardiopathie, insuffisance rénale…) ou d’échec du traitement à domicile. 
+
+Signes de gravité nécessitant une hospitalisation d’emblée :
+
+- vomissements incoercibles
+- perte de poids > 5% du poids initial
+- intolérance alimentaire totale
+- signes cliniques ou biologiques de déshydratation
+- hypokaliémie
+
+Pendant l’hospitalisation : 
+
+- Pose de VVP pour traitement IV dans un premier temps : 
+
+    - réhydratation, à adapter aux résultats du bilan biologique
+    - anti-émétiques IV
+    - **En cas d’hypokaliémie <3 mmol/L**, prévenir l’anesthésiste pour assurer la recharge potassique +/- en salle de réveil, avec scope
+
+- Bas de contention
+- Surveillance quotidienne : état général, vomissements, constantes, poids / jour, diurèse / jour, bilan biologique journalier
+- Reprise progressive de l’alimentation et passage des anti-émétiques par voie per-os avec l’amélioration des symptômes
+- Prise en charge psychologique à proposer, à poursuivre après le retour à domicile
+- Limiter les visites sans pour autant les interdire pour favoriser le repos des patientes

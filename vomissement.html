@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+  <body>
+    <header></header>
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+              <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+            </li>
+          <li class="menu__group">
+              <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+
+<div id="a-larrivée-aux-urgences" class="section level3">
+<h3>A l’arrivée aux urgences</h3>
+<p><strong>Interrogatoire et examen clinique, penser à :</strong></p>
+<ul>
+<li>Rechercher comorbidités (diabète, insuffisance rénale, cardiopathie…)</li>
+<li>Rechercher signes de gravité : déshydratation, perte de poids, malaise, choc hypovolémique</li>
+<li>Eliminer diagnostics différentiels (notamment en cas de symptômes associés (fièvre, céphalées…)</li>
+</ul>
+</div>
+<div id="examens-complémentaires" class="section level3">
+<h3>Examens complémentaires</h3>
+<ul>
+<li><p><strong>Echographie obstétricale</strong> : évolutivité de la grossesse, recherche d’une grossesse multiple ou d’une grossesse molaire.</p></li>
+<li><p><strong>Bilan biologique</strong> :</p>
+<ul>
+<li>NFS, plaquettes</li>
+<li>Ionogramme sanguin, urémie, créatininémie, ionogramme urinaire</li>
+<li>Bilan hépatique complet, lipasémie</li>
+<li>Calcémie, phosphorémie, magnésémie</li>
+<li>TSH, T4</li>
+<li>Glycémie</li>
+</ul></li>
+</ul>
+<p>A faire en ville en l’absence de signe clinique de gravité ou en hospitalisation au 2e étage si patiente hospitalisée. Pas de bilan biologique aux urgences.</p>
+<ul>
+<li><strong>ECG</strong> : en cas de troubles hydro-électrolytiques</li>
+</ul>
+</div>
+<div id="prise-en-charge-à-domicile" class="section level3">
+<h3>Prise en charge à domicile</h3>
+<p>En l’absence de signe de gravité et de comorbidité :</p>
+<ul>
+<li>Règles hygiéno-diététiques : fractionnement des repas, éviction de certains aliments (trop gras, trop épicés ou au goût trop prononcé), apport hydrique suffisant</li>
+<li>Méthodes non médicamenteuses : gingembre, jus de citron, acupuncture</li>
+<li>Traitements médicamenteux :</li>
+<li>En première intention :
+<ul>
+<li>métoclopramide (Primperan® 10mg x 3 /jour per os, en sub-lingual ou en suppositoire) ou</li>
+<li>doxylamine (Donormyl® 15mg le soir)</li>
+</ul></li>
+<li>En seconde intention :
+<ul>
+<li>doxylamine en association à la vitamine B6 (Cariban® : 2 gélules de 10mg le soir au coucher à J1. Si ce traitement est efficace sur les nausées du matin mais qu’il persiste des symptômes dans la journée, ajouter une gélule de 10mg le matin +- l’après-midi (dose maximale de 4 gélules par jour))</li>
+<li>En cas d’échec : ondansétron (Zophren®, Sétofilm®) 4mg x 3 / jour, possible après 10SA (risques malformatifs avant 10 SA).</li>
+</ul></li>
+<li>Prise en charge psychologique à proposer</li>
+<li>Informer la patiente sur les signes devant la faire consulter</li>
+</ul>
+</div>
+<div id="prise-en-charge-hospitalière" class="section level3">
+<h3>Prise en charge hospitalière</h3>
+<p>En cas de signe de gravité, de comorbidité (diabète, cardiopathie, insuffisance rénale…) ou d’échec du traitement à domicile.</p>
+<p>Signes de gravité nécessitant une hospitalisation d’emblée :</p>
+<ul>
+<li>vomissements incoercibles</li>
+<li>perte de poids &gt; 5% du poids initial</li>
+<li>intolérance alimentaire totale</li>
+<li>signes cliniques ou biologiques de déshydratation</li>
+<li>hypokaliémie</li>
+</ul>
+<p>Pendant l’hospitalisation :</p>
+<ul>
+<li><p>Pose de VVP pour traitement IV dans un premier temps :</p>
+<ul>
+<li>réhydratation, à adapter aux résultats du bilan biologique</li>
+<li>anti-émétiques IV</li>
+<li><strong>En cas d’hypokaliémie &lt;3 mmol/L</strong>, prévenir l’anesthésiste pour assurer la recharge potassique +/- en salle de réveil, avec scope</li>
+</ul></li>
+<li><p>Bas de contention</p></li>
+<li><p>Surveillance quotidienne : état général, vomissements, constantes, poids / jour, diurèse / jour, bilan biologique journalier</p></li>
+<li><p>Reprise progressive de l’alimentation et passage des anti-émétiques par voie per-os avec l’amélioration des symptômes</p></li>
+<li><p>Prise en charge psychologique à proposer, à poursuivre après le retour à domicile</p></li>
+<li><p>Limiter les visites sans pour autant les interdire pour favoriser le repos des patientes</p></li>
+</ul>
+</div>
+
+<div id="section-tableau-1" class="section level3">
+  <h3>Algorithme de prise en charge</h3>
+  <div>
+  <p><img class="img" src="images/VG2.png"></p>
+  </div>
+
+
+  
+
+

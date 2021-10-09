@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+  </head>
+  <body>
+    <header></header>
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+          </li>
+          <li class="menu__group">
+              <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+            </li>
+          <li class="menu__group">
+              <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+
+<div id="section-protocole-geu" class="section level1">
+  <h1>PROTOCOLE GEU</h1>
+  <div id="section-traitement" class="section level3">
+  <h3>Traitement :</h3>
+  <ol style="list-style-type: decimal">
+  <li>Traitement médical</li>
+  </ol>
+  <p>Il concerne les formes asymptomatiques ou pauci symptomatiques de GEU considérées comme pas ou faiblement actives. Efficacité voisine de 85 %.</p>
+  <p>Indications :</p>
+  <ul>
+  <li>GEU non rompue</li>
+  <li>hémodynamique stable</li>
+  <li>absence de CI au méthotrexate (bilan hépatique, rénal, hématologique et de coagulation normaux)</li>
+  <li>compliance et adhésion de la patiente au protocole.</li>
+  </ul>
+  <p>Contre-indications du traitement médical par méthotrexate :</p>
+  <ul>
+  <li>Refus de la patiente</li>
+  <li>Difficultés de surveillance en ambulatoire (patiente non compliante, éloignement géographique, isolement)</li>
+  <li>État hémodynamique instable</li>
+  <li>Épanchement péritonéal extrapelvien (comblement gouttières pariéto-coliques, épanchement cul-de-sac interhépato rénal)</li>
+  <li>Douleurs abdominales importantes</li>
+  <li>Antécédents de GEU homolatérale</li>
+  <li>Thrombopénie &lt; 100 000/mm3</li>
+  <li>Leucopénie &lt; 2 000/mm3</li>
+  <li>Élévation de la créatinine &gt; 130 µmol/L</li>
+  <li>Élévation des enzymes hépatiques (ALAT ou ASAT &gt; 2 × normale)</li>
+  </ul>
+  <p>Cas particuliers :</p>
+  <ul>
+  <li>Activité cardiaque visible</li>
+  <li>hCG &gt; 5 000 UI/l</li>
+  <li>taille de la GEU supérieure à 4 cm.</li>
+  </ul>
+  <p>Dans ces cas le traitement de première intention est chirurgical. Mais un traitement médicamenteux reste envisageable, en particulier en cas de coelioscopie a priori difficile. Dans ces cas, se rappeler que l’efficacité du traitement médical est moindre.</p>
+  <p>Bilan préthérapeutique :</p>
+  <ul>
+  <li>hCG</li>
+  <li>NF + plaquettes, TP, TCA, fibrinogène</li>
+  <li>Groupe sanguin, Rhésus, RAI</li>
+  <li>Créatinine, bilan hépatique (ASAT et ALAT)</li>
+  <li>Consultation anesthésie.</li>
+  </ul>
+  <p>Modalités du traitement médical par méthotrexate (habituellement réalisé en ambulatoire) :</p>
+  <ul>
+  <li>1 mg/kg IM</li>
+  <li>Prescription d’un traitement antalgique simple à la demande (pas d’aspirine ni d’AINS)</li>
+  <li>Prévenir la patiente de l’augmentation des douleurs pelviennes pouvant être notée dans les 24 h post-injection et pouvant persister jusqu’au 4e jour.</li>
+  </ul>
+  <p>Recommandations pour les patientes :</p>
+  <ul>
+  <li>Repos (proposer arrêt de travail de 7 jours si travail non sédentaire)</li>
+  <li>Être toujours joignable (n° tél. domicile, travail, portable)</li>
+  <li>Être domiciliée à moins d’une heure de l’hôpital</li>
+  <li>Possibilité d’être accompagnée, quelle que soit l’heure du jour ou de la nuit à l’hôpital</li>
+  <li>Possibilité d’un suivi régulier sur plusieurs semaines</li>
+  <li>Pas de consommation d’alcool, pas de rapports sexuels</li>
+  <li>Pas de prise d’AINS ni d’aspirine.</li>
+  </ul>
+  <p>Surveillance après traitement médical :</p>
+  <ul>
+  <li>Dosage des hCG à J7 puis 1 fois par semaine jusqu’à négativation (en moyenne 30 jours)</li>
+  <li>A J7, patiente revue en consultation pour évaluation clinique et échographique + interprétation biologique : si R (taux hCG J0-hCG J7 / hCG J0) &lt; 15 %
+  <ul>
+  <li>2e injection IM de méthotrexate à la même dose</li>
+  <li>Poursuite de la surveillance des hCG 1 fois par semaine</li>
+  </ul></li>
+  <li>Quel que soit le moment du traitement, en cas d’algies intenses, rupture tubaire avec hémopéritoine, ou échec après trois injections de méthotrexate
+  <ul>
+  <li>Cœlioscopie « de rattrapage »</li>
+  </ul></li>
+  <li>± Hystérosalpingographie : 3 mois après la fin du traitement médical (c’est-à-dire 3 mois après négativation des hCG) si contexte d’infertilité.</li>
+  </ul>
+  <p>Si mauvaise tolérance au méthotrexate (conjonctivite, stomatite, diarrhées, nausées, vomissements) dans le cas d’injections répétées une supplémentation par acide folinique peut être proposée (1 injection IM de 0,1 mg/kg à J 2, J 4, J 6 et J 8 pour J 1 = date injection méthotrexate).</p>
+  <ol start="2" style="list-style-type: decimal">
+  <li>Traitement chirurgical : radical ou conservateur</li>
+  </ol>
+  <p>Voie d’abord : cœliochirurgicale</p>
+  <p>Laparotomie si contre-indication à la cœlioscopie (état de choc hémodynamique, abdomen multiadhérentiel ou contre-indication anesthésique)</p>
+  <p>Indications à traitement chirurgical radical (salpingectomie) :</p>
+  <ul>
+  <li>Absence de désir de grossesse</li>
+  <li>Trompe rompue et altérée</li>
+  <li>Antécédent de GEU ou de chirurgie tubaire homolatérale</li>
+  <li>Hémorragie tubaire non contrôlable (initiale ou post salpingotomie)</li>
+  <li>Hématosalpinx supérieur ou égal à 6 cm.</li>
+  </ul>
+  <p>Sinon, traitement conservateur (salpingotomie). Le traitement conservateur est à privilégier en cas d’altérations de la trompe controlatérale.</p>
+  <p>Surveillance après traitement conservateur (échec environ 15 %)</p>
+  <p>Dosage hCG 48 h après l’intervention (par rapport au taux initial) :</p>
+  <ul>
+  <li>si taux &lt; 15 %, succès : pas de contrôle des hCG</li>
+  <li>si taux 15–35 % : contrôle hebdomadaire des hCG jusqu’à négativation</li>
+  <li>si taux &gt; 35 %, échec probable : traitement par méthotrexate 1 mg/kg en IM puis contrôle hebdomadaire des hCG jusqu’à négativation. Si mauvaise évolution des hCG : nouvelle cœlioscopie.</li>
+  </ul>
+  <ol start="3" style="list-style-type: decimal">
+  <li>Abstention thérapeutique</li>
+  </ol>
+  <p>Indications :</p>
+  <ul>
+  <li>Patiente asymptomatique ET évolution spontanément décroissante des hCG</li>
+  </ul>
+  <p>Contre-indications :</p>
+  <ul>
+  <li>Difficultés de surveillance en ambulatoire (patiente non compliante, éloignement géographique, isolement)</li>
+  <li>Taux initial hCG &gt; 1 500 UI/l, activité cardiaque positive</li>
+  </ul>
+  <p>Surveillance :</p>
+  <ul>
+  <li>hCG 1 fois par semaine jusqu’à négativation.</li>
+  </ul>
+  <ol start="4" style="list-style-type: decimal">
+  <li>Pour toute patiente :</li>
+  </ol>
+  <ul>
+  <li>Groupe sanguin, rhésus</li>
+  <li>Pour toute patiente rhésus négatif, prévention de l’allo-immunisation rhésus :
+  <ul>
+  <li>Rophylac® 200 g : 1 injection IV directe après contrôle des RAI (sans en attendre les résultats)</li>
+  <li>Pas de contrôle après injection.</li>
+  </ul></li>
+  </ul>
+  </div>
+  <div id="section-cas-particuliers" class="section level3">
+  <h3>Cas particuliers :</h3>
+  <ul>
+  <li><p>GEU proximales (interstitielle, cornuale…) :</p>
+  <ul>
+  <li>Si stable, un traitement médical peut être effectué en première intention, y compris en cas de découverte coelioscopique. Ses modalités seront définies au cas par cas avec l’équipe chirurgicale et comprendra une initiation en hospitalisation et des injections répétées de Méthotrexate (J0, J 2, J4, J6).</li>
+  <li>Si instable le traitement chirurgical s’impose (laparotomique ou cœlioscopique selon l’état de la patiente). L’injection in situ n’a pas prouvé son intérêt et aucune technique chirurgicale n’a prouvé sa supériorité (cornuotsomie, résection cornuale…) par rapport à une autre.</li>
+  </ul></li>
+  <li><p>Si GEU ovarienne ou abdominale, préférer le traitement médical même si le diagnostic est fait en percoelioscopie.</p></li>
+  <li><p>De la même manière, préférer un traitement médical, à une laparoconversion si l’abdomen est adhérentiel, rendant la chirurgie cœlioscopique a priori difficile.</p></li>
+  <li><p>En cas de grossesse dans la cicatrice de césarienne, proposer un traitement médical avec injection directe in situ de méthotrexate sous contrôle échographique.</p></li>
+  <li><p>En cas de grossesse cervicale, traitement médical avec discussion d’une embolisation hypersélective des artères utérines.</p></li>
+  <li><p>En cas de traitement cœlioscopique conservateur avec GEU active (activité cardiaque positive) ou avortement tuboabdominal, il est possible d’adjoindre systématiquement une injection de méthotrexate à 1 mg/kg IM.</p></li>
+  </ul>
+  </div>
+  <div id="section-resultats" class="section level3">
+  <h3>Resultats :</h3>
+  <ul>
+  <li><p>Le taux de succès du traitement radical est proche de 100 %.</p></li>
+  <li><p>Le taux de succès du traitement conservateur est de 90 % et proche de 100 % si méthotrexate systématique.</p></li>
+  <li><p>Le taux de succès du traitement médical est de 85 %.</p></li>
+  </ul>
+  </div>
+  <div id="section-fertilité" class="section level3">
+  <h3>Fertilité :</h3>
+  <p>Elle semble quasi identique, quel que soit le traitement proposé.</p>
+  </div>
+  <div id="section-références" class="section level3">
+  <h3>Références :</h3>
+  <ol style="list-style-type: decimal">
+  <li><p>Gervaise A et al. Prise en charge diagnostique et thérapeutique des grossesses extra-utérines. J Gynecol Obstet Biol Reprod 2010 ; 39 (3 Suppl) : F 17-24.</p></li>
+  <li><p>Madelenat P et al. Recommandations pour la pratique clinique. Prise en charge de la grossesse extra-utérine. CNGOF 2003.</p></li>
+  <li><p>Dupuis O et al. Grossesse extra-utérine. EMC, Gynécologie/Obstétrique. 5-032-A-30, 2009.</p></li>
+  <li><p>Moawad et al. Current diagnosis and treatment of interstital pregnancy. Am J Obstet Gynecol 2010 ; 202 (1) : 15-29.</p></li>
+  <li><p>Mol et al. Current evidence on surgery, systemic methotrexate and expectant management in the treatment of tubal ectopic pregnancy: a systematic review and meta-analysis. Hum Reprod 2008 ; 14 (4) : 309-319.</p></li>
+  </ol>
+  <br></br><br></br><br></br><br></br>  
+</div>
+  </div>
+   

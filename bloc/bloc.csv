@@ -1,27 +1,78 @@
-﻿Jour     ,Date       ,Salle 1 ,Salle 2        ,Salle 3     ,UCA    
-Lundi,29/03/2021,,CC+AGC / CC (AGC),,CA
-Mardi,30/03/2021,,CC+CA / CC (CA),BB+AGC,LM
-Mercredi,31/03/2021,AB,PM,AGC,PMA
-Jeudi,01/04/2021,,FD,LM,PM
-Vendredi,02/04/2021,,BB,BB (CA) / CA,GP
-,03/04/2021,,,,
-,04/04/2021,,,,
-Lundi,05/04/2021,,,,
-Mardi,06/04/2021,,CC+FP / CC (FP),LM,LC
-Mercredi,07/04/2021,BB,AB,PMA,PM
-Jeudi,08/04/2021,,PM,LC,FD
-Vendredi,09/04/2021,,AGC,GP,BB / CA
-,10/04/2021,,,,
-,11/04/2021,,,,
-Lundi,12/04/2021,,CC+FP / CC (FP),,AGC
-Mardi,13/04/2021,,CC+FP / CC (FP),BB+AGC,FP
-Mercredi,14/04/2021,AB,FP,,PMA
-Jeudi,15/04/2021,,FD,LC,PM
-Vendredi,16/04/2021,,BB,BB (FP) / FP,GP
-,17/04/2021,,,,
-,18/04/2021,,,,
-Lundi,19/04/2021,,CC+CA / CC (CA),FP,AB
-Mardi,20/04/2021,,CC+CA / CC (CA),LM,LC
-Mercredi,21/04/2021,BB,AB,PMA,PM
-Jeudi,22/04/2021,,PM,LC,FD
-Vendredi,23/04/2021,,AGC,GP,CA
+Jour     ,Date       ,PR 1,UCA
+Lundi,04/10/2021,CC + FP,AB
+Mardi,05/10/2021,LM,LC
+Mercredi,06/10/2021,BB,PM
+Jeudi,07/10/2021,PM,FD
+Vendredi,08/10/2021,GP,CA
+,09/10/2021,,
+,10/10/2021,,
+Lundi,11/10/2021,CC + AGC,CA
+Mardi,12/10/2021,BB,LM
+Mercredi,13/10/2021,AB,PMA
+Jeudi,14/10/2021,LC,PM
+Vendredi,15/10/2021,CA,GP
+,16/10/2021,,
+,17/10/2021,,
+Lundi,18/10/2021,CC + CA,AB
+Mardi,19/10/2021,AGC,LC
+Mercredi,20/10/2021,BB,PM
+Jeudi,21/10/2021,LC,FD
+Vendredi,22/10/2021,CA,AGC
+,23/10/2021,,
+,24/10/2021,,
+Lundi,25/10/2021,CC + AGC,FP
+Mardi,26/10/2021,FP,PM
+Mercredi,27/10/2021,AB,PMA
+Jeudi,28/10/2021,FD,PM
+Vendredi,29/10/2021,AGC,GP
+,30/10/2021,,
+,31/10/2021,,
+Lundi,01/11/2021,,
+Mardi,02/11/2021,LM,AB
+Mercredi,03/11/2021,BB,PM
+Jeudi,04/11/2021,PM,FD
+Vendredi,05/11/2021,BB + ?,CA
+,06/11/2021,,
+,07/11/2021,,
+Lundi,08/11/2021,CC + FP,AGC
+Mardi,09/11/2021,BB + CA,LM
+Mercredi,10/11/2021,AB,PMA
+Jeudi,11/11/2021,,
+Vendredi,12/11/2021,CA,
+,13/11/2021,,
+,14/11/2021,,
+Lundi,15/11/2021,CC + CA,LC
+Mardi,16/11/2021,FP,AB
+Mercredi,17/11/2021,BB,PM
+Jeudi,18/11/2021,LC,FD
+Vendredi,19/11/2021,GP,CA
+,20/11/2021,,
+,21/11/2021,,
+Lundi,22/11/2021,CC +AGC,FP
+Mardi,23/11/2021,BB + AGC,LM
+Mercredi,24/11/2021,AB,PMA
+Jeudi,25/11/2021,FD,PM
+Vendredi,26/11/2021,CA,GP
+,27/11/2021,,
+,28/11/2021,,
+Lundi,29/11/2021,CC + FP,AB
+Mardi,30/11/2021,AB / FP,LC
+Mercredi,01/12/2021,BB,PM
+Jeudi,02/12/2021,PM,FD
+Vendredi,03/12/2021,GP,CA
+,04/12/2021,,
+,05/12/2021,,
+Lundi,06/12/2021,CC + CA,AGC
+Mardi,07/12/2021,BB + FP,LM
+Mercredi,08/12/2021,AB,PMA
+Jeudi,09/12/2021,LC,PM
+Vendredi,10/12/2021,CA,GP
+,11/12/2021,,
+,12/12/2021,,
+Lundi,13/12/2021,CC + AGC,AB
+Mardi,14/12/2021,AGC,LC
+Mercredi,15/12/2021,BB,PM
+Jeudi,16/12/2021,LC,FD
+Vendredi,17/12/2021,AGC,CA
+,18/12/2021,,
+,19/12/2021,,

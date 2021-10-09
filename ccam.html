@@ -13,53 +13,63 @@
 
   </head>
   <body>
-     
+    <header></header>
     <div class="menu">
-      <nav class="menu__nav">
-        <ul class="menu__list r-list">
-          <li class="menu__group">
-            <a href="index.html" class="menu__link r-link">Fonctionnement du service</a>
-          </li>
-          <li class="menu__group">
-            <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
-          </li>
-          <li class="menu__group">
-            <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
-          </li>
-          <li class="menu__group">
-            <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
-          </li>
-          <li class="menu__group">
-            <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
-          </li>
-          <li class="menu__group">
-            <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
-          </li>
-          <li class="menu__group">
-            <a href="num.html" class="menu__link r-link">Numeros utiles</a>
-          </li>
-          <li class="menu__group">
-            <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
-          </li>
-          <li class="menu__group">
-            <a href="cours.html" class="menu__link r-link">Planning cours</a>
-          </li>
-          <li class="menu__group">
-            <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
-          </li>
-          <li class="menu__group">
-            <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="menu__toggle r-button" type="button">
-        <span class="menu__hamburger m-hamburger">
-          <span class="m-hamburger__label">
-            <span class="menu__screen-reader screen-reader">Open menu</span>
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+                <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+              </li>
+            <li class="menu__group">
+                <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+              </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
           </span>
-        </span>
-      </button>
-    </div>
+        </button>
+      </div>
+
 
 <script>
 /*
@@ -123,10 +133,126 @@ This code is created to display element's behavior. I'm not a JS expert so don't
 
 </script>
 
-<script src="/vendors/d3.V3.min.js"></script>
-<script type="text/javascript"charset="utf-8" src="/ccam/ccam.js">
-        
-    </script>
+<div id="section-chirurgie" class="section level3">
+
+
+<table>
+  <tr><td><b>Code</b> </td><td> <b>Intitulé</b></td></tr> 
+ 
+  <tr><td></td></tr> 
+ 
+  <tr><td><b>ASPIRATION</b></td><td></td></tr> 
+ 
+  <tr><td>JNJD002 </td><td> évac. ut. gravide aspi. +/- curetage 1er trim. </td></tr> 
+ 
+  <tr><td>JNJP001 </td><td> évac. ut. gravide moy. médict 1er trim. </td></tr> 
+ 
+  <tr><td>JNMD001 </td><td> révision cav. ut. après avort. </td></tr> 
+ 
+  <tr><td></td></tr> 
+ 
+  <tr><td><b>TORSION ANNEXE</b></td><td></td></tr> 
+ 
+  <tr><td>ZCQC002 </td><td> explo. cav. abd. coelio. </td></tr> 
+ 
+  <tr><td>ZCQA001 </td><td> laparo explo </td></tr> 
+ 
+  <tr><td>JJEC001 </td><td> détorsion annexe coelio. </td></tr> 
+ 
+  <tr><td>JJFC003 </td><td> kystectomie ovarienne périt. coelio.  </td></tr> 
+ 
+  <tr><td>JJFC010 </td><td> salpingoovariectomie coelio.</td></tr> 
+ 
+  <tr><td>JJFC008 </td><td> ovariectomie unilat. coelio. </td></tr> 
+ 
+  <tr><td><b>GEU</b></td><td></td></tr> 
+ 
+  <tr><td>JJFC001 </td><td> salpingectomie pr G.E.U coelio. </td></tr> 
+ 
+  <tr><td>JJJC002 </td><td> expression tubaire G.E.U coelio. </td></tr> 
+ 
+  <tr><td>JJLJ001 </td><td> inj. intraovulaire pr G.E.U v.basse +guid écho </td></tr> 
+ 
+  <tr><td>JJJA002 </td><td> expression tubaire G.E.U laparo </td></tr> 
+ 
+  <tr><td>JJFA001 </td><td> salpingectomie pr G.E.U laparo </td></tr> 
+ 
+  <tr><td>JJPA001 </td><td> salpingotomie +aspi. G.E.U laparo </td></tr> 
+ 
+  <tr><td>JJPC001 </td><td> salpingotomie +aspi. G.E.U coelio.</td></tr> 
+ 
+  <tr><td><b>PELVI-PERITONITE</b></td><td></td></tr> 
+ 
+  <tr><td>ZZHJ003 </td><td> pct 1org. prof. sur 1cible v. cav. +guid écho </td></tr> 
+ 
+  <tr><td>JJJC001 </td><td> évac. collection annexe/lig. large coelio. </td></tr> 
+ 
+  <tr><td>ZCJC001 </td><td> évac. collection abdo. coelio </td></tr> 
+ 
+  <tr><td>QZJA011 </td><td> évac. collection prof. ab. direct </td></tr> 
+ 
+  <tr><td>HHFA016 </td><td> appendicectomie coelio/laparo +prépa. coelio. </td></tr> 
+ 
+  <tr><td><b>VULVE</b></td><td></td></tr> 
+ 
+  <tr><td>JMPA001 </td><td> incision glde Bartholin </td></tr> 
+ 
+  <tr><td>JLFA002 </td><td> exérèse lés. vag. </td></tr> 
+ 
+  <tr><td>JLCA008 </td><td> suture vag. </td></tr> 
+ 
+  <tr><td>JLJB001 </td><td> évac. collection paroi vag/vulve v.basse/transcut. </td></tr> 
+ 
+  <tr><td>JMFA001 </td><td> exérèse glde Bartholin </td></tr> 
+ 
+  <tr><td><b>SEIN</b></td><td></td></tr> 
+ 
+  <tr><td>QEJA001 </td><td> évac. collection gld mamm. ab. direct </td></tr> 
+ 
+  <tr><td>QEHB001 </td><td> pct lés. gld mamm. transcut. sans guid </td></tr> 
+ 
+  <tr><td><b>COL</b></td><td></td></tr> 
+ 
+  <tr><td>JKCD001 </td><td> suture col ut. </td></tr> 
+ 
+  <tr><td><b>HYSTEROSCOPIE</b></td><td></td></tr> 
+ 
+  <tr><td>JKNE001 </td><td> abrasion muq. ut. hystéroscopie </td></tr> 
+ 
+  <tr><td>JKQE002 </td><td> hystéroscopie </td></tr> 
+ 
+  <tr><td>JKQE001 </td><td> hystéroscopie +curetage cav. ut. </td></tr> 
+ 
+  <tr><td>JKFE001 </td><td> polypectom. ut. hystéroscopie </td></tr> 
+ 
+  <tr><td>JKFE002 </td><td> résec. myome ut. hystéroscopie </td></tr> 
+ 
+  <tr><td>JKGD002 </td><td> curetage cav. ut. thérap. </td></tr> 
+ 
+  <tr><td><b>CONSULTATION</b></td><td></td></tr> 
+ 
+  <tr><td>JNQM001 </td><td> écho non morph. grosS av. 11semaines aménorrhée </td></tr> 
+ 
+  <tr><td>ZCQM007 </td><td> écho pelvis féminin pr surv. ovulation </td></tr> 
+ 
+  <tr><td>JKLD001 </td><td> pose 1DIU</td></tr> 
+ 
+  <tr><td>JKGD004 </td><td> abl. 1DIU v. vag. </td></tr> 
+ 
+  <tr><td>QZGA002 </td><td> abl/changt implant pharmaco sscut </td></tr> 
+ 
+  <tr><td>QZLA004 </td><td> pose implant pharmaco sscut </td></tr> 
+ 
+  <tr><td>JKFD001 </td><td> exérèse lés. péd. ut. accouchée col v. vag. </td></tr> 
+ 
+  <tr><td>JLHA001 </td><td> biopsie vag. </td></tr> 
+ 
+  <tr><td>JMHA001 </td><td> biopsie vulve </td></tr> 
+ </table>
+
+<br></br><br></br><br></br>
+
+</div>
       
       <script src="main.js"></script>
 
