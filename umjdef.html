@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="manifest" href="manifest.json">
+    <title>Livret Internes</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Work+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body>
+    <header></header>
+    <div class="menu">
+        <nav class="menu__nav">
+          <ul class="menu__list r-list">
+            <li class="menu__group">
+              <a href="accueil.html" class="menu__link r-link">Accueil</a>
+            </li>
+            <li class="menu__group">
+              <a href="fonctionnement.html" class="menu__link r-link">Fonctionnement du service</a>
+            </li>
+            <li class="menu__group">
+              <a href="orthogenie.html" class="menu__link r-link">Orthogénie</a>
+            </li>
+            <li class="menu__group">
+              <a href="embolisation.html" class="menu__link r-link">Protocole embolisation</a>
+            </li>
+            <li class="menu__group">
+              <a href="GEU.html" class="menu__link r-link">Protocole GEU</a>
+            </li>
+            <li class="menu__group">
+              <a href="IGH.html" class="menu__link r-link">Protocole IGH</a>
+            </li>
+            <li class="menu__group">
+              <a href="FCS.html" class="menu__link r-link">Protocole grossesses arrétées</a>
+            </li>
+            <li class="menu__group">
+              <a href="HSO.html" class="menu__link r-link">Protocole Hyperstimulation</a>
+            </li>
+          <li class="menu__group">
+              <a href="vomissement.html" class="menu__link r-link">Protocole Vomissements</a>
+            </li>
+            <li class="menu__group">
+              <a href="umj.html" class="menu__link r-link">Protocole UMJ</a>
+            </li>
+            <li class="menu__group">
+              <a href="num.html" class="menu__link r-link">Numeros utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="ccam.html" class="menu__link r-link">Codages utiles</a>
+            </li>
+            <li class="menu__group">
+              <a href="cours.html" class="menu__link r-link">Planning cours</a>
+            </li>
+            <li class="menu__group">
+              <a href="bloc.html" class="menu__link r-link">Planning  bloc</a>
+            </li>
+            <li class="menu__group">
+              <a href="gardes.html" class="menu__link r-link">Planning gardes</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="menu__toggle r-button" type="button">
+          <span class="menu__hamburger m-hamburger">
+            <span class="m-hamburger__label">
+              <span class="menu__screen-reader screen-reader">Open menu</span>
+            </span>
+          </span>
+        </button>
+      </div>
+
+
+<script>
+/*
+!!!!!
+This code is created to display element's behavior. I'm not a JS expert so don't use it
+!!!!!
+*/
+
+
+(function(){
+  'use strict';
+
+  class Menu {
+    constructor(settings) {
+      this.menuNode = settings.menuNode;
+      this.state = false;
+      this.menuStateTextNode = settings.menuStateTextNode || this.menuNode.querySelector('.menu__screen-reader');
+      this.menuOpenedText = settings.menuOpenedText || 'Open menu';
+      this.menuClosedText = settings.menuClosedText || 'Close menu';
+    }
+    
+    changeState(state) {
+      return this.state = !state;
+    }
+    
+    changeStateText(state, node) {
+      let text = (state !== true) ? this.menuOpenedText : this.menuClosedText;
+      
+      node.textContent = text;
+      return text; 
+    }
+           
+    toggleMenuState(className) {   
+      
+      let state;
+      
+      if (typeof className !== 'string' || className.length === 0) {
+        return console.log('you did not give the class for the toggleState function');
+      } 
+            
+      state = this.changeState(this.state);
+      
+      this.changeStateText(state, this.menuStateTextNode);
+      this.menuNode.classList.toggle(className);
+      
+      return state;  
+    }
+  }
+
+  const jsMenuNode = document.querySelector('.menu');
+  const demoMenu = new Menu ({
+    menuNode: jsMenuNode
+  });
+  
+  function callMenuToggle(event) {
+    demoMenu.toggleMenuState('menu_activated');
+  }
+  
+  jsMenuNode.querySelector('.menu__toggle').addEventListener('click', callMenuToggle);
+})();
+
+</script>
+
+<div id="watermark">
+<p>Protocole en cours de validation</p>
+</div>
+
+<div id="soit-la-victime-souhaite-déposer-plainte" class="section level3">
+<h3>Soit la victime souhaite déposer plainte</h3>
+<div id="soit-les-faits-sont-récents-48h" class="section level4">
+<h4>Soit les faits sont récents &lt; 48h :</h4>
+<p><strong>= urgence médicale et « judiciaire »</strong></p>
+<p>Coduite à tenir:</p>
+<ul>
+<li>En l’absence de <strong>contact</strong> préalable <strong>avec la police</strong>, appeler le numéro unique de l’état-major de la Préfecture de police au <strong>01 87 27 66 36</strong> (ou le commissariat d’arrondissement en journée)
+<ul>
+<li>avec les informations : nom, prénom, DDN de la victime, lieu des faits et type de faits déclarés</li>
+</ul></li>
+</ul>
+<p><strong>La police contactera rapidement les UMJ qui prendra en charge la victime sur réquisition judiciaire</strong> (examen sur rdv)</p>
+<ul>
+<li>Contact avec le <strong>médecin légiste référent à l’UMJ (numéro à ne pas communiquer aux victimes !!)</strong><br />
+</li>
+<li>(NB : préciser que vous n’avez pas la trithérapie !!)
+<ul>
+<li>Journée : <strong>01 42 34 78 08</strong> (médecin réfèrent) ou 01 42 34 87 00 (Accueil consultation)<br />
+</li>
+<li>Nuit : <strong>01 42 34 78 08</strong> (médecin légiste de garde) ou 01 42 34 84 46 (IDE de garde)</li>
+</ul></li>
+<li><strong>Conseils à donner à la victime :</strong>
+<ul>
+<li><strong>ne pas se laver</strong> avant l’examen UMJ (si possible)<br />
+</li>
+<li>si la victime a déjà pris une douche, lui remettre une enveloppe kraft pour qu’elle <strong>mette de côté les sous-vetements portés</strong> lors ou suite aux faits,<br />
+</li>
+</ul></li>
+<li><strong>Ne pas faire d’examen</strong> gynécologique/anal (<strong>sauf si nécessité de soins</strong> : prise en charge spécialisée)<br />
+</li>
+<li>Eviter l’examen corporel (contamination ADN) ; <strong>Si examen : utiliser des gants</strong><br />
+</li>
+<li><strong>Si suspicion de soumission chimique : contacter l’UMJ 01 42 34 78 08</strong> +/- faire bilan à garder au frigo et en informer le médecin UMJ<br />
+</li>
+<li><strong>Prélèvements à titre conservatoire :</strong>
+<ul>
+<li>2 tubes de sang sur EDTA<br />
+</li>
+<li>3 tubes à bouchon rouge 7 ml d’urines<br />
+</li>
+<li>2 tubes à bouchon vert hépariné</li>
+</ul></li>
+</ul>
+<p><strong>bilan conservatoire pourra être remis dans un 2e temps aux autorités : TOUJOURS SUR REQUISITON</strong></p>
+<ul>
+<li>Remettre le compte rendu de passage à la victime (mentionnant les éventuels traitements reçus…)</li>
+</ul>
+</div>
+<div id="soit-les-faits-ont-entre-48h-et-1-sem-et-ne-sest-pas-lavée" class="section level4">
+<h4>Soit les faits ont entre &gt; 48h et &lt; 1 sem et ne s’est pas lavée</h4>
+<p><strong>= intérêt médico-légal</strong></p>
+<ul>
+<li>Appel Médecin référent <strong>UMJ 01 42 34 78 08</strong> pour <strong>définir si urgence ou non</strong><br />
+</li>
+<li><strong>Si suspicion de soumission chimique : contacter l’UMJ 01 42 34 78 08</strong> +/- faire bilan à garder au frigo et en informer le médecin UMJ<br />
+</li>
+<li><strong>Prélèvements à titre conservatoire :</strong>
+<ul>
+<li>2 tubes de sang sur EDTA<br />
+</li>
+<li>3 tubes à bouchon rouge 7 ml d’urines<br />
+</li>
+<li>2 tubes à bouchon vert hépariné</li>
+</ul></li>
+</ul>
+<p><strong>bilan conservatoire pourra être remis dans un 2e temps aux autorités : TOUJOURS SUR REQUISITON</strong></p>
+<ul>
+<li><strong>si pas d’urgence</strong> : conseiller d’aller <strong>déposer plainte au commissariat de secteur</strong> qui prendra rdv à l’UMJ<br />
+</li>
+<li>conseils à donner à la victime : possibilité de lui remettre une enveloppe kraft pour qu’elle mette de côté les sous-vetements portés lors ou suite aux faits,</li>
+</ul>
+</div>
+<div id="soit-les-faits-ont-48h-et-sest-lavée" class="section level4">
+<h4>soit les faits ont &gt;48h et s’est lavée</h4>
+<p><strong>= aucune urgence</strong></p>
+<ul>
+<li><strong>Conseil de dépôt de plainte dans commissariat</strong> de son quartier qui prendra le rdv à l’UMJ à l’issue de l’audition.<br />
+</li>
+<li>Conseils à donner à la victime : possibilité de lui remettre une enveloppe kraft pour qu’elle mette de côté les sous-vêtements portés lors ou suite aux faits,</li>
+</ul>
+</div>
+</div>
+<div id="soit-la-victime-ne-souhaite-pas-déposer-plainte" class="section level3">
+<h3>Soit la victime ne souhaite pas déposer plainte</h3>
+<p>l’urgence = urgence médicale :</p>
+<ul>
+<li><strong>PEC AES et grossesse</strong> =&gt; <strong>adresser au SAU Cochin pour prise en charge selon protocole ++++</strong><br />
+</li>
+<li><strong>Aucune indication à faire</strong> examen gynécologique/anal (sauf si nécessité de soins) <strong>ni prélèvements locaux.</strong><br />
+</li>
+<li>Possibilité de conseil de conserver sous-vêtement dans une enveloppe papier, surtout si hésitation sur dépôt de plainte<br />
+</li>
+<li><strong>Si examen réalisé : remettre un certificat descriptif</strong> (prudence dans la rédaction du certificat, <strong>rester objectif</strong>) souvent <strong>violence physique associée à décrire</strong><br />
+</li>
+<li><strong>Informer la victime qu’elle peut changer d’avis concernant la plainte</strong> (et le noter dans le dossier…), possibilité de dépôt de plainte <strong>à tout moment</strong><br />
+</li>
+<li>Proposer prise en charge adaptée si nécessaire (sociale, psychologique.. associations.)<br />
+</li>
+<li>S’assurer que la victime ne reparte pas seule</li>
+</ul>
+    <br></br><br></br><br></br><br></br>
+</div>
+

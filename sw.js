@@ -1,4 +1,4 @@
-const cacheName = '1.4.1';
+const cacheName = '1.4.7';
 
 self.addEventListener('install', (evt) => {
     console.log(`sw installé à ${new Date().toLocaleTimeString()}`);       
@@ -24,6 +24,8 @@ self.addEventListener('install', (evt) => {
             'GEU.html',
             'ccam.html',
             'IGH.html',
+            'umj.html',
+            'HSO.html',
             'vendors/d3.V3.min.js',
             'cours.html',
             'embolisation.html',

@@ -9,6 +9,8 @@ DEPENDENCES
 
 /* The component will reset button browser styles */
 
+
+
 .r-button{
   --uirButtonBackgroundColor: var(--rButtonBackgroundColor, transparent);
   --uirButtonPadding: var(--rButtonPadding, var(--rButtonPaddingTop, 0) var(--rButtonPaddingRight, 0) var(--rButtonPaddingBottom, 0) var(--rButtonPaddingLeft, 0));
@@ -668,6 +670,8 @@ box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
   text-align:center;
 
 }
+
+
 
 /*
 img {
