@@ -1,4 +1,4 @@
-const cacheName = '1.4.7';
+const cacheName = '1.5.9.6';
 
 self.addEventListener('install', (evt) => {
     console.log(`sw installé à ${new Date().toLocaleTimeString()}`);       
@@ -45,6 +45,12 @@ self.addEventListener('install', (evt) => {
             'images/VG2.png',
             'main.js',
             'orthogenie.html',
+            'accueil_PMA.html',
+            'planning_PMA.html',
+            'checklist_PO.html',
+            'covid.html',
+            'num_PMA.html',
+            'protocolegcg.html',
         ])
         .then(console.log('cache initialisé'))
         .catch(console.err);
